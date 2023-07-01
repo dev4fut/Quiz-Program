@@ -1,0 +1,5 @@
+run: # run app\app.cpp
+	$(CLS)
+	g++ $(APP_FILES) $(FUNCTIONS_FILES) -o app\app.exe
+	./app\app.exe
+	del app\app.exe
