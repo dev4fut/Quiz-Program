@@ -6,9 +6,9 @@ CLS = cls
 
 run: # run library/Class.cpp
 	$(CLS)
-	g++ $(LIBRARY_FILES) -o library/Class.exe
-	./library/Class.exe
-	del library/Class.exe
+	g++ $(LIBRARY_FILES) main.cpp -o library/Student.exe 
+	./library/Student.exe
+	del library/Student.exe
 
 test: # test library/Class.cpp
 	$cls
