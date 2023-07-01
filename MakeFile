@@ -1,5 +1,17 @@
-run: # run app\app.cpp
+# list file to compile
+DATA_FILES = data/data.cpp
+GUI_FILES = gui/GUI.cpp
+LIBRARY_FILES = library/Student.cpp library/subject.cpp
+CLS = cls
+
+run: # run library/Class.cpp
 	$(CLS)
-	g++ $(APP_FILES) $(FUNCTIONS_FILES) -o app\app.exe
-	./app\app.exe
-	del app\app.exe
+	g++ $(LIBRARY_FILES) -o library/Class.exe
+	./library/Class.exe
+	del library/Class.exe
+
+test: # test library/Class.cpp
+	$cls
+	g++ $(LIBRARY_FILES) -o library/Class.cpp
+	./library/Class.cpp
+	del library/Class.cpp
