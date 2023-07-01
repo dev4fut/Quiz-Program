@@ -4,15 +4,16 @@
 
 using namespace std;
 
-struct UserInfo
+class User
 {
-    int id;
-    string password;
+    public:
+        int id;
+        string password;
 };
 
 void registerDialogs()
 {
-    struct UserInfo info;
+    User info;
     cout << "Student ID: " << endl;
     cin >> info.id;
     cout << "Passwords: " << endl;
