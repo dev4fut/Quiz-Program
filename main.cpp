@@ -1,5 +1,5 @@
 #include <iostream>
-#include "./Subject.h"
+#include "library/Subject.h"
 
 using namespace std;
 
