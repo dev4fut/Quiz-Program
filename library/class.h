@@ -8,13 +8,16 @@ using namespace std;
 class Classroom
 {
     public:
-        string Classname;
-        int idClass;
+        string ClassName;
+        int ClassID;
 
     Classroom();
+
+    void initClass(string ClassName, int ClassID);
     void inputClass();
     void outputClass();
-
+    void updteClass();
+    void removeClass();
 };
 
 #endif

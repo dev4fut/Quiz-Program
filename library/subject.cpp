@@ -1,5 +1,5 @@
 #include <iostream>
-#include "Subject.h"
+#include "subject.h"
 
 using namespace std;
 
@@ -35,8 +35,9 @@ void Subject::outputSubject()
 void Subject::updateSubject()
 {
     string temp;
+    int num;
     cout << "Subject's name: " << endl;
-    cin >> temp;
+    cin >> num;
     if (temp != "")
         nameSubject = temp;
     cout << "Subject's description: ";
