@@ -19,9 +19,9 @@ void Subject::initSubject(int idSubject, string nameSubject, string descriptionS
 
 void Subject::inputSubject()
 {
-    cout << "Subject's Name: " << endl;
+    cout << "Subject's Name: ";
     getline(cin, nameSubject);
-    cout << "Subject's Description: " << endl;
+    cout << "Subject's Description: ";
     getline(cin, descriptionSubject);
 }
 

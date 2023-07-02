@@ -17,3 +17,7 @@ test: # test library/Class.cpp
 	del library/Class.cpp
 
 trial: # test library/Subject.cpp
+	cls
+	g++ $(LIBRARY_FILES) main.cpp -o library/Subject.exe
+	./library/Subject.exe
+	del library/Subject.exe
