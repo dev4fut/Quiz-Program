@@ -1,12 +1,13 @@
 #include <iostream>
-#include "library/Subject.h"
+#include "library/class.h"
 
 using namespace std;
 
 int main()
 {
-    Subject subject;
-    subject.inputSubject();
-    subject.outputSubject();
+    Classroom classroom;
+    classroom.inputClass();
+    classroom.outputClass();
+
     return 0;
 }

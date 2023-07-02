@@ -1,5 +1,5 @@
 #include <iostream>
-#include "Subject.h"
+#include "subject.h"
 
 using namespace std;
 
