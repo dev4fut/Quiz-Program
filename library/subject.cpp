@@ -27,8 +27,9 @@ void Subject::inputSubject()
 
 void Subject::outputSubject()
 {
-    cout << "Subject's name: " << nameSubject << endl;
-    cout << "Subject's description: " << descriptionSubject << endl;
+    cout << "\nSubject's ID: " << idSubject << endl;
+    cout << "\nSubject's name: " << nameSubject << endl;
+    cout << "\nSubject's description: " << descriptionSubject << endl;
 }
 
 void Subject::updateSubject()

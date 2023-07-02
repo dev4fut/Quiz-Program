@@ -3,7 +3,7 @@
 #include <string>
 
 using namespace std;
-
+// Registering System
 class User
 {
     public:
@@ -21,6 +21,8 @@ void User::registerDialog()
     cout << "Passwords: " << endl;
     cin >> this->password;
 }
+
+// Just some txt print out
 
 void welcomeMenu()
 {
