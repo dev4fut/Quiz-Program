@@ -42,10 +42,10 @@ void crudDialog()
 {
     int dialog;
     cout << "\t\t\t\t\t\tQuiz Program Update System\n\n\n\n\n" << endl;
-    cout << "1. Create Student Info" << endl;
-    cout << "2. Read Student Info" << endl;
-    cout << "3. Update Student Info" << endl;
-    cout << "4. Remove Student Info" << endl;
+    cout << "1. Create Info" << endl;
+    cout << "2. Read Info" << endl;
+    cout << "3. Update Info" << endl;
+    cout << "4. Remove Info" << endl;
     cout << "5. Exit" << endl;
     cin >> dialog;
     switch (dialog)

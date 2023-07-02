@@ -18,7 +18,7 @@ void Classroom::initClass(string ClassName, int ClassID)
 void Classroom::inputClass()
 {
     cout << "Input Class Name: ";
-    getline(cin, ClassName);
+    getline(cin, this->ClassName);
     cout << "Input Class ID: ";
     cin >> ClassID;
 }
