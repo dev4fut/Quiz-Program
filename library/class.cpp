@@ -33,14 +33,15 @@ void Classroom::updateClass()
 {
     string temp;
     cout << "Class Name: " << endl;
-    cin >> temp;
+    getline(cin, ClassName);
     if (temp != "")
     {
         Classname = temp;
     }
     cout << "ClassID: " << endl;
     cin >> temp;
-    if(temp != "")
+    getchar();
+    if (temp != "")
     {
         ClassID = temp;
     }

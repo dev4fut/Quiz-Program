@@ -1,17 +1,20 @@
 #include <iostream>
-#include <conio.h>
 #include <string>
+#include <library/class.h>
+#include <library/question.h>
+#include <library/student.h>
+#include <library/subject.h>
 
 using namespace std;
 // Registering System
 class User
 {
-    public:
-        int id;
-        string password;
+public:
+    int id;
+    string password;
 
-        void registerDialog();
-        void optionsDialog();
+    void registerDialog();
+    void optionsDialog();
 };
 
 void User::registerDialog()
@@ -38,10 +41,12 @@ void User::optionsDialog()
     cout << "4. Exit" << endl;
 }
 
-void crudDialog()
+void ClassDialog()
 {
+    Classroom classroom;
     int dialog;
-    cout << "\t\t\t\t\t\tQuiz Program Update System\n\n\n\n\n" << endl;
+    cout << "\t\t\t\t\t\tUpdate Class System\n\n\n\n\n"
+         << endl;
     cout << "1. Create Info" << endl;
     cout << "2. Read Info" << endl;
     cout << "3. Update Info" << endl;
@@ -51,18 +56,48 @@ void crudDialog()
     switch (dialog)
     {
     case 1:
-        /* code */
+        classroom.inputClass();
         break;
     case 2:
-        /* code */
+        classroom.outputClass();
         break;
     case 3:
-        /* code */
+        classroom.updteClass();
         break;
     case 4:
-        /* code */
+        classroom.removeClass();
         break;
-    
+    default:
+        break;
+    }
+}
+
+void ClassDialog()
+{
+    Student student;
+    int dialog;
+    cout << "\t\t\t\t\t\tUpdate Student System\n\n\n\n\n"
+         << endl;
+    cout << "1. Create Info" << endl;
+    cout << "2. Read Info" << endl;
+    cout << "3. Update Info" << endl;
+    cout << "4. Remove Info" << endl;
+    cout << "5. Exit" << endl;
+    cin >> dialog;
+    switch (dialog)
+    {
+    case 1:
+        student.InputStudent();
+        break;
+    case 2:
+        student.OutputStudent();
+        break;
+    case 3:
+        student.UpdateStudent();
+        break;
+    case 4:
+        student.DeleteStudent();
+        break;
     default:
         break;
     }

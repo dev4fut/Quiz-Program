@@ -1,5 +1,5 @@
 test:
 	cls
-	g++ library/class.cpp main.cpp -o a.o
+	g++ exercise/test.cpp -o a.o
 	./a.o
 	del a.o
