@@ -1,9 +1,5 @@
-<<<<<<< HEAD
-#include <iostream>
-=======
 #ifndef CLASS_H
 #define CLASS_H
->>>>>>> ram-2-khe
 
 #include <string>
 
