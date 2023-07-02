@@ -6,12 +6,18 @@ CLS = cls
 
 run: # run library/Class.cpp
 	$(CLS)
-	g++ $(LIBRARY_FILES) main.cpp -o library/Student.exe
+	g++ $(LIBRARY_FILES) main.cpp -o library/Student.exe 
 	./library/Student.exe
-	del ./library/Student.exe
+	del library/Student.exe
 
 test: # test library/Class.cpp
 	$cls
 	g++ $(LIBRARY_FILES) -o library/Class.cpp
 	./library/Class.cpp
-	del ./library/Class.cpp
+	del library/Class.cpp
+
+trial: # test library/Subject.cpp
+	cls
+	g++ $(LIBRARY_FILES) main.cpp -o library/Subject.exe
+	./library/Subject.exe
+	del library/Subject.exe
