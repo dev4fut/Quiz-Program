@@ -15,3 +15,5 @@ test: # test library/Class.cpp
 	g++ $(LIBRARY_FILES) -o library/Class.cpp
 	./library/Class.cpp
 	del library/Class.cpp
+
+trial: # test library/Subject.cpp
