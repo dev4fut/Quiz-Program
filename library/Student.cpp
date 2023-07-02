@@ -1,4 +1,5 @@
 #include <iostream>
+#include <string>
 #include "Student.h"
 
 using namespace std;
@@ -6,43 +7,43 @@ using namespace std;
 
 void Student::InputStudent() {
     
-    cout << "Input Student ID: " << endl;
+    cout << "Input Student ID: ";
     cin >> this->id;
-    cout << "Student Name: " << endl;
+    cout << "\nStudent Name: ";
     cin >> this->name;
-    cout << "Student Number: " << endl;
+    cout << "\nStudent Number: ";
     cin >> this->numberStudent;
-    cout << "Student grade: " << endl;
+    cout << "\nStudent grade: ";
     cin >> this->grade;
 }
 
 void Student::OutputStudent() {
-    cout << "ID: " << id << endl;
-    cout << "Name: " << name << endl;
-    cout << "Student Number: " << numberStudent << endl;
-    cout << "Student grade: " << grade << endl;
+    cout << "ID: " << id;
+    cout << "Name: " << name;
+    cout << "Student Number: " << numberStudent;
+    cout << "Student grade: " << grade;
 }
 
 void Student::UpdateStudent() {
     string temp;
-    cout << "ID: " <<endl;
+    cout << "ID: ";
     cin >> temp;
-    if (temp != " ") {
+    if ( ) {
         this->id;           
     }
-    cout << "Name: " <<endl;
+    cout << "\nName: ";
     cin >> temp;
-    if (temp != " ") {
+    if (temp != "\0") {
         this->name;
     }
-    cout << "Student Number: " << endl;
+    cout << "\nStudent Number: ";
     cin >> temp;
-    if (temp != " ") {
+    if (temp != "\0") {
         this->numberStudent;
     }
-    cout << "Student grade: " << endl;
+    cout << "\nStudent grade: " << endl;
     cin >> temp;
-    if (temp != " ") {
+    if (temp != "\0") {
         this->grade;
     }
 }
