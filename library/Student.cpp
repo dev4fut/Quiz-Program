@@ -28,22 +28,22 @@ void Student::UpdateStudent() {
     string temp;
     cout << "ID: ";
     cin >> temp;
-    if ( ) {
+    if (temp.length() != 0) {
         this->id;           
     }
     cout << "\nName: ";
     cin >> temp;
-    if (temp != "\0") {
+    if (temp.length() != 0) {
         this->name;
     }
     cout << "\nStudent Number: ";
     cin >> temp;
-    if (temp != "\0") {
+    if (temp.length() != 0) {
         this->numberStudent;
     }
     cout << "\nStudent grade: " << endl;
     cin >> temp;
-    if (temp != "\0") {
+    if (temp.length() != 0) {
         this->grade;
     }
 }
