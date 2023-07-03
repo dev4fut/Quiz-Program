@@ -2,31 +2,28 @@
 #define COUNTING_H
 #include <iostream>
 #include <windows.h>
+#include <stdlib.h>
 
 using namespace std;
 
 void counting()
 {
-    unsigned int mins;
-    unsigned int secs;
-    do
-    {
-
-        cout << "Enter Mins: " << endl;
-        cin >> mins;
-    } while (mins < 0);
+    unsigned int mins = 0, secs = 0, limit;
+    cout << "Enter Your Time: " << endl;
+    cin >> limit;
     while (1)
     {
-        cout << "\r\t\t\t%2u : %2u" << mins << secs<< endl;
+        system("cls");
+        cout << mins << ":" << secs<< endl;
         secs++;
-        Sleep(1000); // 1000 =  1 second
+        Sleep(50); // 1000 =  1 second
 
-        if (secs == 0)
+        if (secs == 60)
         {
-            secs = 59;
+            secs = 0;
             mins++; //
         }
-        if (mins == 59 && secs == 59)
+        if (mins == limit)
         {
             cout << "Timed Out" << endl;
             break;
