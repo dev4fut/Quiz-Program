@@ -8,8 +8,9 @@ using namespace std;
 
 void counting()
 {
-    unsigned int mins = 0;
-    unsigned int secs = 0;
+    unsigned int mins = 0, secs = 0, limit;
+    cout << "Enter Your Time: " << endl;
+    cin >> limit;
     while (1)
     {
         system("cls");
@@ -22,7 +23,7 @@ void counting()
             secs = 0;
             mins++; //
         }
-        if (mins == 60 && secs == 60)
+        if (mins == limit)
         {
             cout << "Timed Out" << endl;
             break;
