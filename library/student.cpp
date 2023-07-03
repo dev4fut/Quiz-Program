@@ -1,11 +1,6 @@
 #include <iostream>
 #include <string>
-<<<<<<< HEAD
-#include <conio.h>
-#include "Student.h"
-=======
 #include "student.h"
->>>>>>> 0047260b0fdb28754c52f4a9949584b43b99b3bd
 
 using namespace std;
 

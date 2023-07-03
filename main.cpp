@@ -1,17 +1,15 @@
 #include <iostream>
-<<<<<<< HEAD
 #include "library/subject.h"
 #include "library/student.h"
 #include "library/question.h"
-=======
 #include "library/class.h"
->>>>>>> 0047260b0fdb28754c52f4a9949584b43b99b3bd
+#include "quiz/time.h"
+#include "exercise/counting.h"
 
 using namespace std;
 
 int main()
 {
-<<<<<<< HEAD
     // Subject subject;
     // subject.inputSubject();
     // subject.outputSubject();
@@ -24,11 +22,10 @@ int main()
     // question.InputQuestion();
     // question.InputAnswer();
     // question.OutputQuestion();
-=======
-    Classroom classroom;
-    classroom.inputClass();
-    classroom.outputClass();
+    // Classroom classroom;
+    // classroom.inputClass();
+    // classroom.outputClass();
 
->>>>>>> 0047260b0fdb28754c52f4a9949584b43b99b3bd
+    counting();
     return 0;
 }
