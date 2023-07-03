@@ -1,10 +1,10 @@
 #include <iostream>
 #include "library/subject.h"
 #include "library/student.h"
-#include "library/question.h"
+#include "library/Question.h"
 #include "library/class.h"
-#include "quiz/time.h"
 #include "exercise/counting.h"
+#include "quiz/quiz.h"
 
 using namespace std;
 
@@ -26,6 +26,6 @@ int main()
     // classroom.inputClass();
     // classroom.outputClass();
 
-    counting();
+    quizStart();
     return 0;
 }
