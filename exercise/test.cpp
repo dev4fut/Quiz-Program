@@ -1,5 +1,5 @@
 #include <iostream>
-#include <counting.h>
+#include "counting.h"
 
 int main()
 {
