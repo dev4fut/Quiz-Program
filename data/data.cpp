@@ -9,14 +9,11 @@
 
 using namespace std;
 
-Classroom classroom;
-
-void writeFileClass() {
-    ofstream ClassFile;
-    ClassFile.open("class.txt", ios::out);
-    ClassFile << classroom.ClassName << endl;
-    ClassFile << classroom.ClassID << endl;
-    ClassFile.close();
+void writeFile(string fn, string data) {
+    ofstream f;
+    f.open(fn, ios::out);
+    f << data;
+    f.close();
 }
 
 void readFileClass() {
@@ -25,4 +22,8 @@ void readFileClass() {
     ClassFile >> classroom.ClassName;
     ClassFile >> classroom.ClassID;
     ClassFile.close();
+}
+
+void inputListClass(string arrayName) {
+
 }

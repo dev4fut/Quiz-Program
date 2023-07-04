@@ -6,7 +6,7 @@
 
 using namespace std;
 
-    void writeClassFile();
+    void writeFile();
     void readClassFile();
-
+    void inputListClass(string arrayName);
 #endif

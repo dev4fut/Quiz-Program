@@ -1,4 +1,5 @@
 #include <iostream>
+#include <string>
 #include "class.h"
 #include "../data/data.h"
 
@@ -21,8 +22,7 @@ void Classroom::inputClass()
     cout << "Input Class Name: ";
     getline(cin, this->ClassName);
     cout << "Input Class ID: ";
-    cin >> ClassID;
-    void writeClassFile();
+    cin >> this->ClassID;
 }
 
 void Classroom::outputClass()
