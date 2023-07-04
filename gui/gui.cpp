@@ -64,7 +64,7 @@ void ClassDialog()
         classroom.outputClass();
         break;
     case 3:
-        classroom.updteClass();
+        classroom.updateClass();
         break;
     case 4:
         classroom.removeClass();
@@ -89,15 +89,18 @@ void StudentDialog()
     {
     case 1:
         student.InputStudent();
+        student.OutputStudent();
         break;
     case 2:
         student.OutputStudent();
         break;
     case 3:
         student.UpdateStudent();
+        student.OutputStudent();
         break;
     case 4:
         student.DeleteStudent();
+        student.OutputStudent();
         break;
     default:
         break;
@@ -124,6 +127,7 @@ void SubjectDialog()
     {
     case 1:
         subject.inputSubject();
+        subject.outputSubject();
         break;
     case 2:
         subject.outputSubject();

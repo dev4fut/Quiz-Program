@@ -34,6 +34,7 @@ void Classroom::outputClass()
 void Classroom::updateClass()
 {
     string temp;
+    int num;
     cout << "Class Name: " << endl;
     getline(cin, ClassName);
     if (temp != "")
@@ -41,11 +42,11 @@ void Classroom::updateClass()
         ClassName = temp;
     }
     cout << "ClassID: " << endl;
-    cin >> temp;
+    cin >> num;
     getchar();
     if (temp != "")
     {
-        ClassID = temp;
+        ClassID = num;
     }
 }
 

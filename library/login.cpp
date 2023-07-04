@@ -4,7 +4,8 @@
 
 using namespace std;
 
-void SigninDialog()
+void SignIn()
 {
-    
+    ifstream SignIn;
+    SignIn.open("Sign.txt", );
 }
