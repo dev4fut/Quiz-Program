@@ -130,6 +130,7 @@ void SubjectDialog()
         break;
     case 3:
         subject.updateSubject();
+        subject.outputSubject();
         break;
     case 4:
         subject.outputSubject();
