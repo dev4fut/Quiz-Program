@@ -4,7 +4,6 @@
 #include "library/Question.h"
 #include "library/class.h"
 #include "exercise/counting.h"
-#include "quiz/quiz.h"
 
 using namespace std;
 
@@ -14,6 +13,9 @@ int main()
     // Subject subject;
     // subject.inputSubject();
     // subject.outputSubject();
+    Classroom classroom;
+    counting();
+    classroom.outputClass();
 
     // Student student;
     // student.InputStudent();

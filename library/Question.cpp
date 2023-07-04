@@ -1,6 +1,5 @@
 #include <iostream>
 #include "question.h"
-#include <fstream>
 
 using namespace std;
 
