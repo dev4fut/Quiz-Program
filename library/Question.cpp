@@ -3,17 +3,13 @@
 
 using namespace std;
 
-fstream questionFile;
-
-open("question.txt", ios::in);
-
 void Question::InputQuestion() {
     cout << "ID Question: ";
     cin >> this->id;
     getchar();
     cout << "Input Question " << id << ": ";
     getline(cin, this->question);
-    QuestionFile << " Question " << id << ": " << question;
+    questionFile << " Question " << id << ": " << question;
 }
 
 void Question::InputAnswer() {

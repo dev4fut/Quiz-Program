@@ -13,16 +13,18 @@ int main()
     // Subject subject;
     // subject.inputSubject();
     // subject.outputSubject();
+
     Classroom classroom;
-    counting();
+    // counting();
+    classroom.inputClass();
     classroom.outputClass();
 
     // Student student;
     // student.InputStudent();
     // student.UpdateStudent();
 
-    Question question;
-    question.InputQuestion();
+    // Question question;
+    // question.InputQuestion();
     // question.InputAnswer();
     
     // Classroom classroom;

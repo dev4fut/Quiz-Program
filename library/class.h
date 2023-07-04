@@ -16,7 +16,7 @@ class Classroom
     void initClass(string ClassName, int ClassID);
     void inputClass();
     void outputClass();
-    void updteClass();
+    void updateClass();
     void removeClass();
 };
 
