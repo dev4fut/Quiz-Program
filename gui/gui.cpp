@@ -4,18 +4,10 @@
 #include <library/question.h>
 #include <library/student.h>
 #include <library/subject.h>
+#include <gui.h>
 
 using namespace std;
 // Registering System
-class User
-{
-public:
-    int id;
-    string password;
-
-    void registerDialog();
-    void optionsDialog();
-};
 
 void User::registerDialog()
 {
@@ -40,6 +32,16 @@ void User::optionsDialog()
     cout << "3. Forgot Password" << endl;
     cout << "4. Exit" << endl;
 }
+
+void ExerciseOrTest()
+{
+    cout << "You're gonna do exercise or test" << endl;
+    cout << "1. Exercise" << endl;
+    cout << "2. Test" << endl;
+    cout << "3. Exit" << endl;
+}
+
+// CRUD things
 
 void ClassDialog()
 {
@@ -72,7 +74,7 @@ void ClassDialog()
     }
 }
 
-void ClassDialog()
+void StudentDialog()
 {
     Student student;
     int dialog;
@@ -101,4 +103,14 @@ void ClassDialog()
     default:
         break;
     }
+}
+
+void QuestionDialog()
+{
+
+}
+
+void SubjectDialog()
+{
+    cout << "" << endl;
 }

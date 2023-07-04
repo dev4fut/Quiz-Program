@@ -4,24 +4,14 @@
 #include "library/Question.h"
 #include "library/class.h"
 #include "exercise/counting.h"
-<<<<<<< HEAD
-=======
-#include "quiz/quiz.h"
->>>>>>> ram-1-khe
 
 using namespace std;
 
 int main()
 {
-<<<<<<< HEAD
     Classroom classroom;
     counting();
     classroom.outputClass();
-=======
-    // Subject subject;
-    // subject.inputSubject();
-    // subject.outputSubject();
->>>>>>> ram-1-khe
 
     // Student student;
     // student.InputStudent();
