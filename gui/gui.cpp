@@ -78,8 +78,7 @@ void StudentDialog()
 {
     Student student;
     int dialog;
-    cout << "\t\t\t\t\t\tUpdate Student System\n\n\n\n\n"
-         << endl;
+    cout << "\t\t\t\t\t\tUpdate Student System\n\n\n\n\n" << endl;
     cout << "1. Create Info" << endl;
     cout << "2. Read Info" << endl;
     cout << "3. Update Info" << endl;
@@ -112,5 +111,31 @@ void QuestionDialog()
 
 void SubjectDialog()
 {
-    cout << "" << endl;
+    Subject subject;
+    int dialog;
+    cout << "\t\t\t\t\t\tUpdate Student System\n\n\n\n\n" << endl;
+    cout << "1. Create Info" << endl;
+    cout << "2. Read Info" << endl;
+    cout << "3. Update Info" << endl;
+    cout << "4. Remove Info" << endl;
+    cout << "5. Exit" << endl;
+    cin >> dialog;
+    switch (dialog)
+    {
+    case 1:
+        subject.inputSubject();
+        break;
+    case 2:
+        subject.outputSubject();
+        break;
+    case 3:
+        subject.updateSubject();
+        break;
+    case 4:
+        subject.outputSubject();
+        subject.deleteSubject();
+        break;
+    default:
+        break;
+    }
 }

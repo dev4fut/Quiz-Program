@@ -4,19 +4,17 @@
 
 using namespace std;
 
-Student student;
 
 void Student::InputStudent() {
     
     cout << "Input Student ID: ";
     cin >> this->id;
-    getchar();
     cout << "\nStudent Name: ";
-    getline(cin,this->name);
+    cin >> this->name;
     cout << "\nStudent Number: ";
-    getline(cin,this->numberStudent);
+    cin >> this->numberStudent;
     cout << "\nStudent grade: ";
-    getline(cin,this->grade);
+    cin >> this->grade;
 }
 
 void Student::OutputStudent() {
@@ -27,33 +25,29 @@ void Student::OutputStudent() {
 }
 
 void Student::UpdateStudent() {
-    // tiếp tục nhấn 1
-    // ko đổi nhấn 2
     string temp;
-    int num;
-    cout << "ID (skip press 0): ";
-    cin >> num;
-    getchar();
-    if (num != 0) {
-        this->id;
+    cout << "ID: ";
+    cin >> temp;
+    if (temp.length() != 0) {
+        this->id;           
     }
     cout << "\nName: ";
-    getline(cin, temp);
-    if (temp != "") {
+    cin >> temp;
+    if (temp.length() != 0) {
         this->name;
     }
     cout << "\nStudent Number: ";
-    getline(cin, temp);
-    if (temp != "") {
+    cin >> temp;
+    if (temp.length() != 0) {
         this->numberStudent;
     }
     cout << "\nStudent grade: " << endl;
-    getline(cin, temp);
-    if (temp != "") {
+    cin >> temp;
+    if (temp.length() != 0) {
         this->grade;
     }
 }
 
 void Student::DeleteStudent() {
-    delete this;
+    
 }
