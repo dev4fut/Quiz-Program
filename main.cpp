@@ -10,6 +10,7 @@ using namespace std;
 
 int main()
 {
+    int i;
     // Subject subject;
     // subject.inputSubject();
     // subject.outputSubject();
@@ -18,14 +19,17 @@ int main()
     // student.InputStudent();
     // student.UpdateStudent();
 
-    // Question question;
-    // question.InputQuestion();
+    Question question;
+    question.InputQuestion();
     // question.InputAnswer();
-    // question.OutputQuestion();
+    
     // Classroom classroom;
     // classroom.inputClass();
     // classroom.outputClass();
 
-    quizStart();
+    // quizStart();
+    // question.OutputQuestion();
+    // cout << "Choose your answer: ";
+    // cin >> i;
     return 0;
 }

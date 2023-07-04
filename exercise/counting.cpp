@@ -7,23 +7,23 @@ using namespace std;
 
 void counting()
 {
-    unsigned int mins = 0, secs = 0, limit;
-    cout << "Enter Your Time: " << endl;
-    cin >> limit;
+    unsigned int mins = 0, secs = 10;
     while (1)
     {
         system("cls");
         cout << mins << ":" << secs<< endl;
-        secs++;
+        secs--;
         Sleep(1000); // 1000 =  1 second
 
-        if (secs == 60)
+        if (mins > 0 && secs == 0)
         {
-            secs = 0;
-            mins++; //
+            secs = 59;
+            mins--; //
         }
-        if (mins == limit)
+        if (mins == 0 && secs == 0)
         {
+            system("cls");
+            cout << mins << ":0" << endl;
             cout << "Timed Out" << endl;
             break;
         }
