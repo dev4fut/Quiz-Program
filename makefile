@@ -1,9 +1,5 @@
 test:
 	cls
-<<<<<<< HEAD
-	g++ main.cpp -o a.o
-=======
-	g++ quiz/quiz.cpp -o library/student.cpp -o exercise/counting.cpp main.cpp -o a.o
->>>>>>> ram-1-khe
+	g++ ./library/class.cpp ./data/data.cpp main.cpp -o a.o
 	./a.o
 	del a.o

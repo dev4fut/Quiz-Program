@@ -9,8 +9,14 @@ using namespace std;
 
 int main()
 {
+    int i;
+    // Subject subject;
+    // subject.inputSubject();
+    // subject.outputSubject();
+
     Classroom classroom;
-    counting();
+    // counting();
+    classroom.inputClass();
     classroom.outputClass();
 
     // Student student;
@@ -20,11 +26,14 @@ int main()
     // Question question;
     // question.InputQuestion();
     // question.InputAnswer();
-    // question.OutputQuestion();
+    
     // Classroom classroom;
     // classroom.inputClass();
     // classroom.outputClass();
 
-    quizStart();
+    // quizStart();
+    // question.OutputQuestion();
+    // cout << "Choose your answer: ";
+    // cin >> i;
     return 0;
 }

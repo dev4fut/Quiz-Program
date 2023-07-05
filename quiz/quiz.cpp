@@ -1,7 +1,8 @@
 #include <iostream>
 #include <windows.h>
 #include <stdlib.h>
-#include "library/student.h"
+#include "../library/question.h"
+#include "../exercise/counting.h"
 
 /*
     Information Student
@@ -14,20 +15,19 @@
 using namespace std;
 
 void quizStart() {
+    int i = 1;
+    Question question;
 
     // starting in 3 2 1
-    cout << "Starting in ";
-    int n = 3;
-
-    for (int i = 0; i < 3; i++)
-    {
-        cout << n << "\n";
-        Sleep(1000);
-        n--;
-    }
+   while (i < 4) {
+    system("cls");
+    cout << "Starting in " << i++ << endl;
+    Sleep(1000);
+   }
+   
     // clear the screen
     system("cls");
-
+    counting();
     
 }
 
