@@ -1,5 +1,5 @@
-test:
+trial:
 	cls
-	g++ ./library/class.cpp ./data/data.cpp main.cpp -o a.o
-	./a.o
-	del a.o
+	g++ ./data/login.cpp main.cpp -o b.o
+	./b.o
+	del b.o
