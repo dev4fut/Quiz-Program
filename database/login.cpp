@@ -37,13 +37,28 @@ void UserData::LogIn()
 {
     ifstream login;
     login.open("./data/LoginData.txt");
-    int checkpassword, checkusername;
+    string checkpassword, checkusername;
 
-    cout << "Username: ";
-    getline(cin, username);
+    cout << "Username: " << "\n";
+    while (login >> username)
+    {
+        username.push_back(username);
+    }
+    //    getline(cin, checkusername);
 
-    cout << "Password: ";
-    getline(cin, password);
+    //    login >> password;
+    //    cout << "Password: " << '\n';
+    //    getline(cin, checkpassword);
+    /*
+    if (checkusername == username)
+        {
+            cout << "true" << endl;
+        }
+        else
+        {
+            cout << "false" << endl;
+        }
 
-    login.close();
+        login.close();
+    */
 }

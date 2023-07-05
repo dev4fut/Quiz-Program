@@ -1,5 +1,5 @@
 #ifndef SCORE_H
-#define SCOREG_H
+#define SCORE_H
 
 void score();
 
