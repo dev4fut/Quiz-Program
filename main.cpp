@@ -2,14 +2,18 @@
 #include "library/subject.h"
 #include "library/student.h"
 #include "library/Question.h"
-#include "library/class.h"
 #include "exercise/counting.h"
+<<<<<<< HEAD
 #include "./controller/classes.h"
+=======
+#include "data/login.h"
+>>>>>>> 2a6e8df815b8f02104246d8d6d35e0d40870019c
 
 using namespace std;
 
 int main()
 {
+<<<<<<< HEAD
     int i;
     // Subject subject;
     // subject.inputSubject();
@@ -43,5 +47,9 @@ int main()
     classes.update();
     system("pause");
     classes.remove();
+=======
+    UserData user;
+    user.LogIn();
+>>>>>>> 2a6e8df815b8f02104246d8d6d35e0d40870019c
     return 0;
 }
