@@ -9,18 +9,22 @@ using namespace std;
 
 void inputListClass(Classroom l[])
 {
+    Classroom classroom;
     int i;
-    while (1)
+    cout << "Do you want to add more class ? (1 Yes || 2 No): ";
+    cin >> i;
+    do
     {
-        cout << "Do you want to add more class ? (1 Yes || 2 No): ";
-        cin >> i;
-        if (i == 1 && i > 0 && i < 3)
+        if (i == 1)
         {
             classroom.inputClass();
         }
-        else if (i == 2 && i > 0 && i < 3)
+        else if (i == 2)
         {
             break;
         }
-    }
+    } while (i < 3 && i > 0);
+}
+
+void outputListClass(Classroom l[]) {
 }
