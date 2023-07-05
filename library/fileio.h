@@ -2,21 +2,20 @@
 #define FILEIO_H
 
 #include <string>
+#include <fstream>
 
 using namespace std;
 
 class FileIO
 {
     public:
-        string file_name;
-        string file_path;
-        string file_extension;
+        ofstream file;
 
         FileIO();
-        void writeFile();
-        void readFile();
-        void closeFile();
-        void appendFile();
+        
+        void open(string filename);
+        void close();
+        void write(string data);
 };
 
 #endif

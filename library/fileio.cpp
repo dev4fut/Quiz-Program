@@ -1,31 +1,40 @@
 #include <iostream>
 #include <fstream>
+#include <filesystem>
 #include "fileio.h"
 
 using namespace std;
+using std::filesystem::current_path;
 
-FileIO::FileIO()
+
+void FileIO::open(string filename)
 {
-    this->file_name = "file.txt";
-    this->file_path = "data/";
+    string path;
+    getcwd(filename);
+    FILE *file = fopen(path.c_str(), "rb+");
 }
 
-void readfile()
-{
-
-}
-
-void writefile()
-{
-
-}
-
-void appendfile()
+void FileIO::readFile()
 {
 
 }
 
-void FileIO::closeFile(string file_name)
+void FileIO::writeFile()
 {
-    file_name.close();
+    string path = this->file_path + this->file_name + this->file_extension;
+    ofstream writefile(path, ios::out | ios::binary);
+    if (!writeFile)
+    {
+        cout << "Cannot open file " << endl;
+        return;
+    }
+    for (int i = 0; i < sizeof(); i++)
+    {
+
+    }
+}
+
+void FileIO::closeFile(FILE *file)
+{
+    fclose(file);
 }

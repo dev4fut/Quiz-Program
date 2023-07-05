@@ -16,6 +16,7 @@ class Student {
     void OutputStudent();
     void UpdateStudent();
     void DeleteStudent();
+    void read();
 };
 
 #endif
