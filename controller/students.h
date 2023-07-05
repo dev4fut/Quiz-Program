@@ -12,9 +12,9 @@ class Students {
     void init();
     void input();
     void output();
-    void find();
-    void update();
-    void remove();
+    int find(int id);
+    void update(int id);
+    void remove(int id);
 };
 
 #endif
