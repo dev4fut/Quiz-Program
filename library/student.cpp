@@ -4,8 +4,14 @@
 
 using namespace std;
 
+void Student::init() {
+    this->id = 0;
+    this->name = "";
+    this->numberStudent = "";
+    this->grade = "";
+}
 
-void Student::InputStudent() {
+void Student::input() {
     
     cout << "Input Student ID: ";
     cin >> this->id;
@@ -17,14 +23,14 @@ void Student::InputStudent() {
     cin >> this->grade;
 }
 
-void Student::OutputStudent() {
+void Student::ouptut() {
     cout << "ID: " << id;
     cout << "Name: " << name;
     cout << "Student Number: " << numberStudent;
     cout << "Student grade: " << grade;
 }
 
-void Student::UpdateStudent() {
+void Student::update() {
     string temp;
     cout << "ID: ";
     cin >> temp;
@@ -48,6 +54,9 @@ void Student::UpdateStudent() {
     }
 }
 
-void Student::DeleteStudent() {
-    
+void Student::remove() {
+    this->id = 0;
+    this->name = "";
+    this->numberStudent = "";
+    this->grade = "";
 }

@@ -12,10 +12,11 @@ class Student {
     string numberStudent;
     string grade;
 
-    void InputStudent();
-    void OutputStudent();
-    void UpdateStudent();
-    void DeleteStudent();
+    void init();
+    void input();
+    void ouptut();
+    void update();
+    void remove();
 };
 
 #endif

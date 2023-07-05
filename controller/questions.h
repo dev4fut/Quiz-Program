@@ -8,14 +8,14 @@ class Questions {
     public:
 
     Question dataQuestion[100];
-    Question dataAnswer[400];
-    int id;
+    int n; // vị trí thứ n của dataQuestion[]
 
     void init();
     void input();
     void output();
-    void update();
-    void remove();
+    int  find(int id);
+    void update(int id);
+    void remove(int id);
 };
 
 #endif
