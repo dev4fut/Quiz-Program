@@ -1,40 +1,35 @@
 #include <iostream>
 #include <fstream>
 #include <filesystem>
+#include <unistd.h>
 #include "fileio.h"
 
 using namespace std;
-using std::filesystem::current_path;
 
+string convertToString(char* a, int size)
+{
+    int i;
+    string s = "";
+    for (i = 0; i < size; i++) {
+        s = s + a[i];
+    }
+    return s;
+}
 
 void FileIO::open(string filename)
 {
-    string path;
-    getcwd(filename);
-    FILE *file = fopen(path.c_str(), "rb+");
+    char path[256];
+    getcwd(path, 256);
+    string fpath = convertToString(path, 256) + "/" + filename + ".txt";
+    file.open(fpath, ios::binary);
 }
 
-void FileIO::readFile()
-{
-
+void FileIO::write(string data) {
+    const char* temp = data.c_str();
+    this->file.write(temp, sizeof(temp));
 }
 
-void FileIO::writeFile()
+void FileIO::close()
 {
-    string path = this->file_path + this->file_name + this->file_extension;
-    ofstream writefile(path, ios::out | ios::binary);
-    if (!writeFile)
-    {
-        cout << "Cannot open file " << endl;
-        return;
-    }
-    for (int i = 0; i < sizeof(); i++)
-    {
-
-    }
-}
-
-void FileIO::closeFile(FILE *file)
-{
-    fclose(file);
+    this->file.close();
 }

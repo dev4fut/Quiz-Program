@@ -10,8 +10,6 @@ class FileIO
 {
     public:
         ofstream file;
-
-        FileIO();
         
         void open(string filename);
         void close();

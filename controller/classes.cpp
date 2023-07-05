@@ -1,5 +1,7 @@
 #include <iostream>
 #include "classes.h"
+#include "../library/fileio.h"
+#include "../library/class.h"
 
 using namespace std;
 
@@ -51,3 +53,21 @@ void Classes::remove(int id) {
     }
     this->n--;   
 }
+
+void Classes::write() {
+    FileIO file;
+    string result = "";
+    file.open("class");
+    for (int i = 0; i < this->n; i++)
+    {
+        result = result + this->data[i].toString();
+    }
+    file.write(result);
+    file.close();
+}
+
+void Classes::read() {
+    FileIO file;
+    file.open("class");
+}
+

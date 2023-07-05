@@ -1,7 +1,7 @@
 #include <iostream>
 #include <string>
 #include "class.h"
-#include "../data/fileIO.h"
+#include "fileIO.h"
 
 using namespace std;
 
@@ -30,6 +30,11 @@ void Classroom::output()
 {
     cout << " ID: " << id << endl;
     cout << " Name: " << name << endl;
+}
+
+string Classroom::toString() {
+
+    return "" + to_string(id) + "\t" + name + "\n";
 }
 
 void Classroom::update()

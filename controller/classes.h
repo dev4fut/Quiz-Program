@@ -16,6 +16,8 @@ class Classes
     int find(int id);
     void update(int id);
     void remove(int id);
+    void read();
+    void write();
 };
 
 #endif
