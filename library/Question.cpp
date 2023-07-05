@@ -9,25 +9,21 @@ void Question::InputQuestion() {
     getchar();
     cout << "Input Question " << id << ": ";
     getline(cin, this->question);
-    questionFile << " Question " << id << ": " << question;
-}
-
-void Question::InputAnswer() {
-    QuestionFile << "Input Answer 1: ";
-    cin >> this->answer[0];
-    QuestionFile << "Input Answer 2: ";
-    cin >> this->answer[1];
-    QuestionFile << "Input Answer 3: ";
-    cin >> this->answer[2];
-    QuestionFile << "Input Answer 4: ";
-    cin >> this->answer[3];
+    cout << "Input Answer 1: ";
+    cin >> this->answer;
+    cout << "Input Answer 2: ";
+    cin >> this->answer;
+    cout << "Input Answer 3: ";
+    cin >> this->answer;
+    cout << "Input Answer 4: ";
+    cin >> this->answer;
 }
 
 void Question::OutputQuestion() {
-    QuestionFile << "Question " << id << ": " << question << endl;
+    cout << "Question " << id << ": " << question << endl;
     for (int i = 0; i < 4; i++)
     {
-        QuestionFile << "answer " << i + 1 << ": " << answer[i] << endl;
+        cout << "answer " << i + 1 << ": " << answer[i] << endl;
     }
     
 }

@@ -4,6 +4,7 @@
 #include "library/Question.h"
 #include "library/class.h"
 #include "exercise/counting.h"
+#include "./controller/classes.h"
 
 using namespace std;
 
@@ -14,10 +15,10 @@ int main()
     // subject.inputSubject();
     // subject.outputSubject();
 
-    Classroom classroom;
+    // Classroom classroom;
     // counting();
-    classroom.inputClass();
-    classroom.outputClass();
+    // classroom.inputClass();
+    // classroom.outputClass();
 
     // Student student;
     // student.InputStudent();
@@ -35,5 +36,12 @@ int main()
     // question.OutputQuestion();
     // cout << "Choose your answer: ";
     // cin >> i;
+
+    Classes classes;
+    classes.input();
+    classes.output();
+    classes.update();
+    system("pause");
+    classes.remove();
     return 0;
 }
