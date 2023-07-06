@@ -12,7 +12,7 @@ public:
 };
 
     void ClassDialog();
-    void StudentDialog();
+    void UserDialog();
     void ExercisesOrTest();
 
 #endif
