@@ -1,13 +1,14 @@
-#ifndef STUDENTS_H
-#define STUDENTS_H
+#ifndef USERS_H
+#define USERS_H
 
 #include <iostream>
-#include "../library/student.h"
+#include "users.h"
+#include "../library/user.h"
 
-class Students {
+class Users {
     public:
-    Student data[100];
-    int n; // vị trí thứ n của dataStudent[]
+    User data[100];
+    int n; // vị trí thứ n của dataUser[]
 
     void init();
     void input();

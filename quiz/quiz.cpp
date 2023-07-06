@@ -5,7 +5,7 @@
 #include "../exercise/counting.h"
 
 /*
-    Information Student
+    Information User
     Question
     Answers
     Time

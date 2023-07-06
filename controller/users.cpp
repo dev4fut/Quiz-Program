@@ -1,13 +1,13 @@
-#include "students.h"
+#include "users.h"
 #include "fileio.h"
 
 using namespace std;
 
-void Students::init() {
+void Users::init() {
     this->n = 0;
 }
 
-void Students::input() {
+void Users::input() {
     string check;
     do
     {
@@ -18,14 +18,14 @@ void Students::input() {
     } while (check == "y");
 }
 
-void Students::output() {
+void Users::output() {
     for (int i = 0; i < 100; i++)
     {
         data[i].ouptut();
     }
 }
 
-string Students::toString() {
+string Users::toString() {
     string result = "";
 
     for (int i = 0; i < this->n; i++)
@@ -36,7 +36,7 @@ string Students::toString() {
     return result;
 }
 
-int Students::find(int id) {
+int Users::find(int id) {
     int i = 0;
     while (data[i].id != id)
     {
@@ -45,12 +45,12 @@ int Students::find(int id) {
     return i;
 }
 
-void Students::update(int id) {
+void Users::update(int id) {
     int i = this->find(id);
     data[i].update();
 }
 
-void Students::remove(int id) {
+void Users::remove(int id) {
     int i = this->find(id);
     while (data[i].id != 0)
     {
@@ -59,12 +59,12 @@ void Students::remove(int id) {
     }
 }
 
-void Students::write() {
+void Users::write() {
     FileIO file;
     file.write("student", this->toString(), this->n);
 }
 
-void Students::read() {
+void Users::read() {
     FileIO file;
     string dat = "";
     file.open("student");
@@ -77,7 +77,7 @@ void Students::read() {
         file.file >> dat;
         this->data[i].name = dat;
         file.file >> dat;
-        this->data[i].numberStudent = dat;
+        this->data[i].numberUser = dat;
         file.file >> dat;
         this->data[i].grade = dat;
     }
