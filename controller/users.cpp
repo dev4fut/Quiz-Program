@@ -80,6 +80,10 @@ void Users::read() {
         this->data[i].numberUser = dat;
         file.file >> dat;
         this->data[i].grade = dat;
+        file.file >> dat;
+        this->data[i].username = dat;
+        file.file >> dat;
+        this->data[i].password = dat;
     }
     cout << dat << endl;
     file.close();

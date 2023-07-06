@@ -32,7 +32,7 @@ void User::ouptut() {
 
 string User::toString() {
 
-    return "" + to_string(id) + "\t" + name + "\t" + numberUser + "\t" + grade + "\t" + grade + "\n";
+    return "" + to_string(id) + "\t" + name + "\t" + numberUser + "\t" + grade + "\t" + username + "\n" + password + "\n";
 }
 
 void User::update() {

@@ -15,7 +15,7 @@ User::User()
 void User::SignIn()
 {
     ofstream login;
-    login.open("./data/LoginData.txt", ios::ate | ios::app);
+    login.open("./data/LoginData.txt", ios::app);
 
     cout << "Input Username: ";
     getline(cin, username);
@@ -35,34 +35,31 @@ void User::SignIn()
 // Checking username and password base on LoginData.txt
 void User::LogIn()
 {
-    ifstream login;
-    login.open("./data/LoginData.txt");
+    ifstream login("./data/LoginData.txt");
+    string checkusername, checkpassword;
+    int count;
 
     cout << "Username: ";
     getline(cin, username);
     cout << "Password: ";
-    getline(cin, username);
-
-    cout << "Username: " << "\n";
-    while (login >> username)
+    getline(cin, password);
+    
+    while(login >> username >> password)
     {
-        username.push_back(username);
+        if (checkusername == username && checkpassword == password)
+        {
+            count = 1;
+            system("cls");
+        }
     }
-    //    getline(cin, checkusername);
+    login.close();
 
-    //    login >> password;
-    //    cout << "Password: " << '\n';
-    //    getline(cin, checkpassword);
-    /*
-    if (checkusername == username)
-        {
-            cout << "true" << endl;
-        }
-        else
-        {
-            cout << "false" << endl;
-        }
-
-        login.close();
-    */
+    if (count == 1)
+    {
+        cout << "true" << endl;
+    }
+    else
+    {
+        cout << "false" << endl;
+    }
 }
