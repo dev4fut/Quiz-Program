@@ -9,8 +9,8 @@ class Users {
     public:
     User data[100];
     int n; // vị trí thứ n của dataUser[]
+    Users();
 
-    void init();
     void input();
     void output();
     string toString();

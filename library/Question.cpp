@@ -1,45 +1,63 @@
 #include <iostream>
-#include "question.h"
+#include "Question.h"
 
 using namespace std;
 
-void Question::init() {
+Question::Question()
+{
     this->id = 0;
     this->question = "";
-    this->answer = "";
+    for (int i = 0; i < 4; i++)
+    {
+        this->answer[i] = "";
+    }
 }
 
-void Question::input() {
+void Question::input()
+{
     cout << "ID Question: ";
     cin >> this->id;
     getchar();
-    cout << "Input Question " << id << ": ";
+    cout << "Input Question: ";
+    cout << question;
     getline(cin, this->question);
     cout << "Input Answer 1: ";
-    getline(cin, this->answer);
+    getline(cin, this->answer[0]);
     cout << "Input Answer 2: ";
-    getline(cin, this->answer);
+    getline(cin, this->answer[1]);
     cout << "Input Answer 3: ";
-    getline(cin, this->answer);
+    getline(cin, this->answer[2]);
     cout << "Input Answer 4: ";
-    getline(cin, this->answer);
+    getline(cin, this->answer[3]);
 }
 
-void Question::output() {
+void Question::output()
+{
     cout << "Question " << id << ": " << question << endl;
     for (int i = 0; i < 4; i++)
     {
         cout << "answer " << i + 1 << ": " << answer[i] << endl;
     }
-    
 }
 
-string Question::toString() {
-
-    return "" + to_string(id) + "\t" + question + "\n" + answer + "\n";
+string Question::arrayToString()
+{
+    string result = "";
+    for (int i = 0; i < 4; i++)
+    {
+        result = result + this->answer[i];
+    }
+    return result;
 }
 
-void Question::update() {
+string Question::toString()
+{
+
+    return "" + to_string(id) + "\t" + question + "\n" + arrayToString() + "\n";
+}
+
+void Question::update()
+{
     string temp;
     int num;
 
@@ -48,23 +66,28 @@ void Question::update() {
     getchar();
     if (num != 0)
     {
-        this->id;
+        this->id = num;
     }
     cout << "Update Question: ";
     getline(cin, temp);
     if (temp != "")
     {
-        this->question;
+        this->question = temp;
     }
-    cout << "Update Answer: ";
-    getline(cin, temp);
-    if (temp != "")
+    for (int i = 0; i < 4; i++)
     {
-        this->answer;
+        cout << "Update Answer " << i + 1 << ": ";
+        getline(cin, temp);
+        if (temp != "")
+        {
+            this->answer[i] = temp;
+            temp = "";
+        }
     }
 }
 
-void Question::remove() {
+void Question::remove()
+{
     this->id = 0;
     this->question = "";
 }

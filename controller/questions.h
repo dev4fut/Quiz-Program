@@ -9,8 +9,8 @@ class Questions {
 
     Question data[100];
     int n; // vị trí thứ n của dataQuestion[]
+    Questions();
 
-    void init();
     void input();
     void output();
     string toString();
@@ -19,6 +19,7 @@ class Questions {
     void remove(int id);
     void write();
     void read();
+    bool check();
 };
 
 #endif
