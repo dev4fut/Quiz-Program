@@ -16,7 +16,7 @@ class UserData
         string checkusername;
 
     UserData();
-    void SignIn();
+    void SignUp();
     void LogIn();
 };
 

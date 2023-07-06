@@ -22,7 +22,7 @@ class User {
     void update();
     void remove();
     void read();
-    void SignIn();
+    void SignUp();
     void LogIn();
 };
 

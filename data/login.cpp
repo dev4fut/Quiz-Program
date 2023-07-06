@@ -12,11 +12,9 @@ User::User()
 }
 
 // Register a user
-void User::SignIn()
+void User::SignUp()
 {
-    ofstream login;
-    login.open("./data/LoginData.txt", ios::app);
-
+    this->read();
     cout << "Input Username: ";
     getline(cin, username);
     login << username;
