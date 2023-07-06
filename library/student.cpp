@@ -30,6 +30,11 @@ void Student::ouptut() {
     cout << "Student grade: " << grade;
 }
 
+string Student::toString() {
+
+    return "" + to_string(id) + "\t" + name + "\t" + numberStudent + "\t" + grade + "\t" + grade + "\n";
+}
+
 void Student::update() {
     string temp;
     cout << "ID: ";

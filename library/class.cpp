@@ -1,7 +1,7 @@
 #include <iostream>
 #include <string>
 #include "class.h"
-#include "fileIO.h"
+#include "fileio.h"
 
 using namespace std;
 

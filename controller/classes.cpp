@@ -1,26 +1,39 @@
-#include <iostream>
 #include "classes.h"
-#include "../library/fileio.h"
-#include "../library/class.h"
+#include "fileio.h"
+
 
 using namespace std;
 
-Classes::Classes() {
+Classes::Classes()
+{
     this->n = 0;
 }
 
-void Classes::input() {
+void Classes::input()
+{
     string check;
     do
     {
         data[n].input();
-        n++;    
+        n++;
         cout << "Do you want to add more class ? (y/n): ";
         cin >> check;
     } while (check == "y" && n < 50);
 }
 
-void Classes::output() {
+string Classes::toString()
+{
+    string result = "";
+    for (int i = 0; i < this->n; i++)
+    {
+        result = result + this->data[i].toString();
+    }
+
+    return result;
+}
+
+void Classes::output()
+{
     cout << "tao dang co: " << n << endl;
     for (int i = 0; i < this->n; i++)
     {
@@ -28,46 +41,56 @@ void Classes::output() {
     }
 }
 
-int Classes::find(int id) {
-    int i = 0;    
+int Classes::find(int id)
+{
+    int i = 0;
 
     while (this->data[i].id != id)
     {
         i++;
     }
-    
+
     return i;
 }
 
-void Classes::update(int id) {
+void Classes::update(int id)
+{
     int i = this->find(id);
     data[i].update();
 }
 
-void Classes::remove(int id) {
+void Classes::remove(int id)
+{
     int i = this->find(id);
     while (this->data[i].id != 0)
     {
-        this->data[i] = this->data[i+1];
+        this->data[i] = this->data[i + 1];
         i++;
     }
-    this->n--;   
+    this->n--;
 }
 
-void Classes::write() {
+void Classes::write()
+{
     FileIO file;
-    string result = "";
+    file.write("class", this->toString(), this->n);
+}
+
+void Classes::read()
+{
+    FileIO file;
+    string dat = "a";
     file.open("class");
+    file.file >> dat;
+    
+    this->n = stoi(dat);
     for (int i = 0; i < this->n; i++)
     {
-        result = result + this->data[i].toString();
+        file.file >> dat;
+        this->data[i].id = stoi(dat);
+        file.file >> dat;
+        this->data[i].name = dat;
     }
-    file.write(result);
+    cout << dat << endl;
     file.close();
 }
-
-void Classes::read() {
-    FileIO file;
-    file.open("class");
-}
-

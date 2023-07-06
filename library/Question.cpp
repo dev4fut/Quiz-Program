@@ -34,6 +34,11 @@ void Question::output() {
     
 }
 
+string Question::toString() {
+
+    return "" + to_string(id) + "\t" + question + "\n" + answer + "\n";
+}
+
 void Question::update() {
     string temp;
     int num;

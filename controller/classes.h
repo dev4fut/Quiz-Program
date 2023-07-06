@@ -11,7 +11,9 @@ class Classes
     int n;
 
     Classes();
+    
     void input();
+    string toString();
     void output();
     int find(int id);
     void update(int id);

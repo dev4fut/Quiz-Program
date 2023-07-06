@@ -25,6 +25,11 @@ void Subject::output()
     cout << "\nSubject's description: " << description << endl;
 }
 
+string Subject::toString() {
+
+    return "" + to_string(id) + "\t" + name + "\t" + description + "\n";
+}
+
 void Subject::update()
 {
     string temp;

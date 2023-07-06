@@ -11,6 +11,9 @@ int main()
 {
     int i;
     Classes classes;
+    classes.input();
     classes.write();
+    classes.read();
+    classes.output();
     return 0;
 }

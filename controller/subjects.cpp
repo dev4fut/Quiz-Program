@@ -1,5 +1,5 @@
-#include <iostream>
 #include "subjects.h"
+#include "fileio.h"
 
 using namespace std;
 
@@ -11,7 +11,7 @@ void Subjects::input() {
     string check;
     do
     {
-        dataSubject[n].input();
+        data[n].input();
         cout << "Do you want to add more subjects? (y/n): ";
         getline(cin, check);
         n++;
@@ -21,13 +21,23 @@ void Subjects::input() {
 void Subjects::output() {
     for (int i = 0; i < this->n; i++)
     {
-        dataSubject[i].output();
+        data[i].output();
     }
+}
+
+string Subjects::toString() {
+    string result = "";
+
+    for (int i = 0; i < this->n; i++)
+    {
+        result = result + this->data[i].toString();
+    }
+    return result;
 }
 
 int Subjects::find(int id) {
     int i = 0;
-    while (dataSubject[i].id != id) {
+    while (data[i].id != id) {
         i++;
     }
     return i;
@@ -35,12 +45,35 @@ int Subjects::find(int id) {
 
 void Subjects::update(int id) {
     int i = find(id);
-    dataSubject[i].update();
+    data[i].update();
 }
 
 void Subjects::remove(int id) {
     int i = find(id);
-    while (dataSubject[i].id != 0) {
-        this->dataSubject[i] = this->dataSubject[i+1];
+    while (data[i].id != 0) {
+        this->data[i] = this->data[i+1];
     }
+}
+
+void Subjects::write() {
+    FileIO file;
+    file.write("subject", this->toString(), this->n);
+}
+
+void Subjects::read() {
+    FileIO file;
+    string dat = "";
+
+    this->n = stoi(dat);
+    for (int i = 0; i < this->n; i++)
+    {
+        file.file >> dat;
+        this->data[i].id = stoi(dat);
+        file.file >> dat;
+        this->data[i].name = dat;
+        file.file >> dat;
+        this->data[i].description = dat;
+    }
+    cout << dat << endl;
+    file.close();
 }

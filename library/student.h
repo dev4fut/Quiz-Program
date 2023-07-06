@@ -15,6 +15,7 @@ class Student {
     void init();
     void input();
     void ouptut();
+    string toString();
     void update();
     void remove();
     void read();

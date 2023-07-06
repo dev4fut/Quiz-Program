@@ -6,29 +6,34 @@
 
 using namespace std;
 
-string convertToString(char* a, int size)
-{
-    int i;
-    string s = "";
-    for (i = 0; i < size; i++) {
-        s = s + a[i];
-    }
-    return s;
-}
-
+/*
+    getcwd() returns the current working directory
+    fpath is directory of data
+*/
 void FileIO::open(string filename)
 {
     char path[256];
-    getcwd(path, 256);
-    string fpath = convertToString(path, 256) + "/" + filename + ".txt";
-    file.open(fpath, ios::binary);
+    string p = getcwd(path, 256);
+    string fpath = p + "\\data\\" + filename + ".txt";
+    file.open(fpath, ios::in | ios::out);
 }
 
-void FileIO::write(string data) {
-    const char* temp = data.c_str();
-    this->file.write(temp, sizeof(temp));
+/*
+    filename: name of file which stored the data
+    data: data to store
+    n: number of bytes to store
+*/
+void FileIO::write(string filename, string data, int n) {
+    this->open(filename);
+    this->file << n;
+    this->file << "\n";
+    this->file << data;
+    file.close();
 }
 
+/*
+    close file
+*/
 void FileIO::close()
 {
     this->file.close();

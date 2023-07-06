@@ -16,6 +16,7 @@ class Question
     void init();
     void input();
     void output();
+    string toString();
     void update();
     void remove();
 };

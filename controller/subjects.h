@@ -6,15 +6,18 @@
 
 class Subjects {
     public:
-    Subject dataSubject[10];
+    Subject data[10];
     int n; // vị trí thứ n của dataSubject[]
 
     void init();
     void input();
     void output();
+    string toString();
     int find(int id);
     void update(int id);
     void remove(int id);
-}
+    void write();
+    void read();
+};
 
 #endif
