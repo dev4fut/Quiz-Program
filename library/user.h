@@ -22,8 +22,6 @@ class User {
     void update();
     void remove();
     void read();
-    void SignUp();
-    void LogIn();
 };
 
 #endif

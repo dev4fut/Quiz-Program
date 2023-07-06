@@ -4,15 +4,17 @@
 
 using namespace std;
 
-void User::init() {
+void User::init()
+{
     this->id = 0;
     this->name = "";
     this->numberUser = "";
     this->grade = "";
 }
 
-void User::input() {
-    
+void User::input()
+{
+
     cout << "Input User ID: ";
     cin >> this->id;
     cout << "\nUser Name: ";
@@ -21,47 +23,74 @@ void User::input() {
     cin >> this->numberUser;
     cout << "\nUser grade: ";
     cin >> this->grade;
+    cout << "\nUsername: ";
+    cin >> this->username;
+    cout << "\nPassword: ";
+    cin >> this->password;
 }
 
-void User::ouptut() {
-    cout << "ID: " << id;
+void User::ouptut()
+{
+    cout << "ID: " << this->id;
     cout << "Name: " << name;
     cout << "User Number: " << numberUser;
     cout << "User grade: " << grade;
 }
 
-string User::toString() {
+string User::toString()
+{
 
-    return "" + to_string(id) + "\t" + name + "\t" + numberUser + "\t" + grade + "\t" + username + "\n" + password + "\n";
+    return "" + to_string(id) + "\t" + name + "\t" + numberUser + "\t" + grade + "\t" + username + "\t" + password + "\n";
 }
 
-void User::update() {
+void User::update()
+{
     string temp;
+    int num = 0;
     cout << "ID: ";
     cin >> temp;
-    if (temp.length() != 0) {
-        this->id;           
+    if (num != 0)
+    {
+        this->id = num;
     }
     cout << "\nName: ";
     cin >> temp;
-    if (temp.length() != 0) {
-        this->name;
+    if (temp.length() != 0)
+    {
+        this->name = temp;
     }
     cout << "\nUser Number: ";
     cin >> temp;
-    if (temp.length() != 0) {
-        this->numberUser;
+    if (temp.length() != 0)
+    {
+        this->numberUser = temp;
     }
     cout << "\nUser grade: " << endl;
     cin >> temp;
-    if (temp.length() != 0) {
-        this->grade;
+    if (temp.length() != 0)
+    {
+        this->grade = temp;
+    }
+    cout << "Username: ";
+    cin >> temp;
+    if (temp.length() != 0)
+    {
+        this->username = temp;
+    }
+    cout << "\nPassword: ";
+    cin >> temp;
+    if (temp.length() != 0)
+    {
+        this->password = temp;
     }
 }
 
-void User::remove() {
+void User::remove()
+{
     this->id = 0;
     this->name = "";
     this->numberUser = "";
     this->grade = "";
+    this->username = "";
+    this->password = "";
 }
