@@ -1,17 +1,20 @@
-#ifndef STUDENT_H
-#define STUDENT_H
+#ifndef USER_H
+#define USER_H
 
 #include <iostream>
 
 using namespace std;
 
-class Student {
+class User {
     public:
     int id;
     string name;
-    string numberStudent;
+    string numberUser;
     string grade;
+    string username;
+    string password;
 
+    User();
     void init();
     void input();
     void ouptut();
@@ -19,6 +22,8 @@ class Student {
     void update();
     void remove();
     void read();
+    void SignIn();
+    void LogIn();
 };
 
 #endif

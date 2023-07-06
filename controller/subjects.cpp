@@ -3,7 +3,7 @@
 
 using namespace std;
 
-void Subjects::init() {
+Subjects::Subjects() {
     this->n = 0;
 }
 

@@ -7,7 +7,7 @@ using namespace std;
 
 void counting()
 {
-    unsigned int mins = 0, secs = 10;
+    unsigned int mins = 9, secs = 59;
     while (1)
     {
         system("cls");

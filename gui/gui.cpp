@@ -9,7 +9,7 @@ using namespace std;
 
 void User::registerDialog()
 {
-    cout << "Student ID: " << endl;
+    cout << "User ID: " << endl;
     cin >> this->id;
     cout << "Passwords: " << endl;
     cin >> this->password;
@@ -72,11 +72,11 @@ void ClassDialog()
     }
 }
 
-void StudentDialog()
+void UserDialog()
 {
-    Student student;
+    User student;
     int dialog;
-    cout << "\t\t\t\t\t\tUpdate Student System\n\n\n\n\n" << endl;
+    cout << "\t\t\t\t\t\tUpdate User System\n\n\n\n\n" << endl;
     cout << "1. Create Info" << endl;
     cout << "2. Read Info" << endl;
     cout << "3. Update Info" << endl;
@@ -114,7 +114,7 @@ void SubjectDialog()
 {
     Subject subject;
     int dialog;
-    cout << "\t\t\t\t\t\tUpdate Student System\n\n\n\n\n" << endl;
+    cout << "\t\t\t\t\t\tUpdate User System\n\n\n\n\n" << endl;
     cout << "1. Create Info" << endl;
     cout << "2. Read Info" << endl;
     cout << "3. Update Info" << endl;

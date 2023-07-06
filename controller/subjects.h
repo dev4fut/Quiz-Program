@@ -8,8 +8,8 @@ class Subjects {
     public:
     Subject data[10];
     int n; // vị trí thứ n của dataSubject[]
+    Subjects(); 
 
-    void init();
     void input();
     void output();
     string toString();
