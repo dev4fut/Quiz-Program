@@ -1,17 +1,11 @@
 #include <iostream>
 #include <string>
-#include "student.h"
+#include "Student.h"
 
 using namespace std;
 
-void Student::init() {
-    this->id = 0;
-    this->name = "";
-    this->numberStudent = "";
-    this->grade = "";
-}
 
-void Student::input() {
+void Student::InputStudent() {
     
     cout << "Input Student ID: ";
     cin >> this->id;
@@ -23,19 +17,14 @@ void Student::input() {
     cin >> this->grade;
 }
 
-void Student::ouptut() {
+void Student::OutputStudent() {
     cout << "ID: " << id;
     cout << "Name: " << name;
     cout << "Student Number: " << numberStudent;
     cout << "Student grade: " << grade;
 }
 
-string Student::toString() {
-
-    return "" + to_string(id) + "\t" + name + "\t" + numberStudent + "\t" + grade + "\t" + grade + "\n";
-}
-
-void Student::update() {
+void Student::UpdateStudent() {
     string temp;
     cout << "ID: ";
     cin >> temp;
@@ -59,9 +48,6 @@ void Student::update() {
     }
 }
 
-void Student::remove() {
-    this->id = 0;
-    this->name = "";
-    this->numberStudent = "";
-    this->grade = "";
+void Student::DeleteStudent() {
+    
 }
