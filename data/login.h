@@ -10,6 +10,8 @@ class UserData
     public:
         string username;
         string password;
+        string checkpassword;
+        string checkusername;
 
     UserData();
     void SignIn();

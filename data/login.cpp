@@ -1,7 +1,7 @@
 #include "login.h"
 #include <iostream>
 #include <fstream>
-#include <string>
+#include <string.h>
 
 using namespace std;
 
@@ -37,28 +37,19 @@ void UserData::LogIn()
 {
     ifstream login;
     login.open("./data/LoginData.txt");
-    string checkpassword, checkusername;
 
-    cout << "Username: " << "\n";
-    while (login >> username)
+    cout << "Username: ";
+    getline(cin, checkusername);
+    cout << "Password: ";
+    getline(cin, checkpassword);
+
+    if (strcmp(checkusername, username) == 0)
     {
-        username.push_back(username);
+        cout << "true";
     }
-    //    getline(cin, checkusername);
-
-    //    login >> password;
-    //    cout << "Password: " << '\n';
-    //    getline(cin, checkpassword);
-    /*
-    if (checkusername == username)
-        {
-            cout << "true" << endl;
-        }
-        else
-        {
-            cout << "false" << endl;
-        }
-
-        login.close();
-    */
+    else
+    {
+        cout << "false";
+    }
+    login.close();
 }

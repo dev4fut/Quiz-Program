@@ -14,12 +14,7 @@ void FileIO::open(string filename)
     FILE *file = fopen(path.c_str(), "rb+");
 }
 
-void FileIO::readFile()
-{
-
-}
-
-void FileIO::writeFile()
+void FileIO::writeFile(string filename)
 {
     string path = this->file_path + this->file_name + this->file_extension;
     ofstream writefile(path, ios::out | ios::binary);

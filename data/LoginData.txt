@@ -1,6 +1,3 @@
-trung	hoang
-hung	nguyen
-trung	hoang
-hun nguyen
-dan	thienphuc
-huy	fireman
+hoang	trung
+hung	manh
+	
