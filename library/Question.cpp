@@ -3,36 +3,43 @@
 
 using namespace std;
 
-void Question::InputQuestion() {
+void Question::init() {
+    this->id = 0;
+    this->question = "";
+    this->answer = "";
+}
+
+void Question::input() {
     cout << "ID Question: ";
     cin >> this->id;
     getchar();
     cout << "Input Question " << id << ": ";
     getline(cin, this->question);
-    questionFile << " Question " << id << ": " << question;
+    cout << "Input Answer 1: ";
+    getline(cin, this->answer);
+    cout << "Input Answer 2: ";
+    getline(cin, this->answer);
+    cout << "Input Answer 3: ";
+    getline(cin, this->answer);
+    cout << "Input Answer 4: ";
+    getline(cin, this->answer);
 }
 
-void Question::InputAnswer() {
-    QuestionFile << "Input Answer 1: ";
-    cin >> this->answer[0];
-    QuestionFile << "Input Answer 2: ";
-    cin >> this->answer[1];
-    QuestionFile << "Input Answer 3: ";
-    cin >> this->answer[2];
-    QuestionFile << "Input Answer 4: ";
-    cin >> this->answer[3];
-}
-
-void Question::OutputQuestion() {
-    QuestionFile << "Question " << id << ": " << question << endl;
+void Question::output() {
+    cout << "Question " << id << ": " << question << endl;
     for (int i = 0; i < 4; i++)
     {
-        QuestionFile << "answer " << i + 1 << ": " << answer[i] << endl;
+        cout << "answer " << i + 1 << ": " << answer[i] << endl;
     }
     
 }
 
-void Question::UpdateQuestion() {
+string Question::toString() {
+
+    return "" + to_string(id) + "\t" + question + "\n" + answer + "\n";
+}
+
+void Question::update() {
     string temp;
     int num;
 
@@ -49,10 +56,6 @@ void Question::UpdateQuestion() {
     {
         this->question;
     }
-}
-
-void Question::UpdateAnswer() {
-    string temp;
     cout << "Update Answer: ";
     getline(cin, temp);
     if (temp != "")
@@ -61,23 +64,7 @@ void Question::UpdateAnswer() {
     }
 }
 
-void Question::DeleteQuestion() {
-    delete this;
-}
-
-void Question::CheckAnswer(int n) {
-    if (n == 1)
-    {
-        answer[0] = true;
-        answer[1] = answer[2] = answer[3] = false;
-    } else if (n == 2) {
-        answer[1] = true;
-        answer[2] = answer[3] = answer[0] = false;
-    } else if (n == 3) {
-        answer[2] = true;
-        answer[3] = answer[0] = answer[1] = false;
-    } else {
-        answer[3] = true;
-        answer[0] = answer[1] = answer[2] = false;
-    }
+void Question::remove() {
+    this->id = 0;
+    this->question = "";
 }

@@ -13,13 +13,12 @@ class Question
     string question;
     string answer;
 
-    void InputQuestion();
-    void InputAnswer();
-    void OutputQuestion();
-    void UpdateQuestion();
-    void UpdateAnswer();
-    void DeleteQuestion();
-    void CheckAnswer(int n);
+    void init();
+    void input();
+    void output();
+    string toString();
+    void update();
+    void remove();
 };
 
 #endif

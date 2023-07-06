@@ -5,49 +5,49 @@ using namespace std;
 
 Subject::Subject()
 {
-    idSubject = 0;
-    nameSubject = "";
-    descriptionSubject = "";
+    id = 0;
+    name = "";
+    description = "";
 }
 
-void Subject::initSubject(int idSubject, string nameSubject, string descriptionSubject)
+void Subject::input()
 {
-    this->nameSubject = nameSubject;
-    this->descriptionSubject = descriptionSubject;
-    this->idSubject = idSubject;
+    cout << "'s Name: ";
+    getline(cin, name);
+    cout << "'s Description: ";
+    getline(cin, description);
 }
 
-void Subject::inputSubject()
+void Subject::output()
 {
-    cout << "Subject's Name: ";
-    getline(cin, nameSubject);
-    cout << "Subject's Description: ";
-    getline(cin, descriptionSubject);
+    cout << "\nSubject's ID: " << id << endl;
+    cout << "\nSubject's name: " << name << endl;
+    cout << "\nSubject's description: " << description << endl;
 }
 
-void Subject::outputSubject()
-{
-    cout << "\nSubject's ID: " << idSubject << endl;
-    cout << "\nSubject's name: " << nameSubject << endl;
-    cout << "\nSubject's description: " << descriptionSubject << endl;
+string Subject::toString() {
+
+    return "" + to_string(id) + "\t" + name + "\t" + description + "\n";
 }
 
-void Subject::updateSubject()
+void Subject::update()
 {
     string temp;
     int num;
     cout << "Subject's name: " << endl;
     cin >> num;
     if (temp != "")
-        nameSubject = temp;
+        name = temp;
     cout << "Subject's description: ";
-    cin >> descriptionSubject;
+    cin >> description;
     if (temp != "")
-        descriptionSubject = temp;
+        description = temp;
 }
 
-void Subject::deleteSubject()
+void Subject::remove()
 {
     // remove subject
-    delete this;
+    this->name = "";
+    this->id = 0;
+    this->description = "";
 }

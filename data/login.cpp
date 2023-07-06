@@ -1,18 +1,18 @@
-#include "login.h"
+#include "../library/user.h"
 #include <iostream>
 #include <fstream>
-#include <string.h>
+#include <string>
 
 using namespace std;
 
-UserData::UserData()
+User::User()
 {
     username = "";
     password = "";
 }
 
 // Register a user
-void UserData::SignIn()
+void User::SignIn()
 {
     ofstream login;
     login.open("./data/LoginData.txt", ios::ate | ios::app);
@@ -33,23 +33,36 @@ void UserData::SignIn()
 }
 
 // Checking username and password base on LoginData.txt
-void UserData::LogIn()
+void User::LogIn()
 {
     ifstream login;
     login.open("./data/LoginData.txt");
 
     cout << "Username: ";
-    getline(cin, checkusername);
+    getline(cin, username);
     cout << "Password: ";
-    getline(cin, checkpassword);
+    getline(cin, username);
 
-    if (strcmp(checkusername, username) == 0)
+    cout << "Username: " << "\n";
+    while (login >> username)
     {
-        cout << "true";
+        username.push_back(username);
     }
-    else
-    {
-        cout << "false";
-    }
-    login.close();
+    //    getline(cin, checkusername);
+
+    //    login >> password;
+    //    cout << "Password: " << '\n';
+    //    getline(cin, checkpassword);
+    /*
+    if (checkusername == username)
+        {
+            cout << "true" << endl;
+        }
+        else
+        {
+            cout << "false" << endl;
+        }
+
+        login.close();
+    */
 }

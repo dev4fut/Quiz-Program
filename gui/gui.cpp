@@ -1,7 +1,5 @@
-#include <iostream>
-#include <string>
 #include <library/class.h>
-#include <library/question.h>
+#include <library/Question.h>
 #include <library/student.h>
 #include <library/subject.h>
 #include <gui.h>
@@ -11,7 +9,7 @@ using namespace std;
 
 void User::registerDialog()
 {
-    cout << "Student ID: " << endl;
+    cout << "User ID: " << endl;
     cin >> this->id;
     cout << "Passwords: " << endl;
     cin >> this->password;
@@ -58,27 +56,27 @@ void ClassDialog()
     switch (dialog)
     {
     case 1:
-        classroom.inputClass();
+        classroom.input();
         break;
     case 2:
-        classroom.outputClass();
+        classroom.output();
         break;
     case 3:
-        classroom.updateClass();
+        classroom.update();
         break;
     case 4:
-        classroom.removeClass();
+        classroom.remove();
         break;
     default:
         break;
     }
 }
 
-void StudentDialog()
+void UserDialog()
 {
-    Student student;
+    User student;
     int dialog;
-    cout << "\t\t\t\t\t\tUpdate Student System\n\n\n\n\n" << endl;
+    cout << "\t\t\t\t\t\tUpdate User System\n\n\n\n\n" << endl;
     cout << "1. Create Info" << endl;
     cout << "2. Read Info" << endl;
     cout << "3. Update Info" << endl;
@@ -88,19 +86,19 @@ void StudentDialog()
     switch (dialog)
     {
     case 1:
-        student.InputStudent();
-        student.OutputStudent();
+        student.input();
+        student.ouptut();
         break;
     case 2:
-        student.OutputStudent();
+        student.ouptut();
         break;
     case 3:
-        student.UpdateStudent();
-        student.OutputStudent();
+        student.update();
+        student.ouptut();
         break;
     case 4:
-        student.DeleteStudent();
-        student.OutputStudent();
+        student.remove();
+        student.ouptut();
         break;
     default:
         break;
@@ -116,7 +114,7 @@ void SubjectDialog()
 {
     Subject subject;
     int dialog;
-    cout << "\t\t\t\t\t\tUpdate Student System\n\n\n\n\n" << endl;
+    cout << "\t\t\t\t\t\tUpdate User System\n\n\n\n\n" << endl;
     cout << "1. Create Info" << endl;
     cout << "2. Read Info" << endl;
     cout << "3. Update Info" << endl;
@@ -126,19 +124,19 @@ void SubjectDialog()
     switch (dialog)
     {
     case 1:
-        subject.inputSubject();
-        subject.outputSubject();
+        subject.input();
+        subject.output();
         break;
     case 2:
-        subject.outputSubject();
+        subject.output();
         break;
     case 3:
-        subject.updateSubject();
-        subject.outputSubject();
+        subject.update();
+        subject.output();
         break;
     case 4:
-        subject.outputSubject();
-        subject.deleteSubject();
+        subject.output();
+        subject.remove();
         break;
     default:
         break;
