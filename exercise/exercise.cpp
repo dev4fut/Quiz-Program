@@ -6,12 +6,7 @@
 
 using namespace std;
 
-void Exercise::exercise()
+void Exercise::exerciseStart()
 {
-<<<<<<< HEAD
-
-}
-=======
     
 }
->>>>>>> ram-1-khe

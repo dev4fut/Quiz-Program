@@ -1,14 +1,41 @@
 #include "library/class.h"
 #include "library/Question.h"
 #include "library/user.h"
+#include "controller/users.h"
 #include "library/subject.h"
 #include "library/class.h"
-#include "controller/users.h"
+#include "exercise/exercise.h"
 #include <iostream>
 
 using namespace std;
 Users users;
+Exercise exercises;
 void main_menu();
+
+void testDialog()
+{
+    int test;
+    system("cls");
+    cout << "\t\t\t____________________________________________________________________\n\n\n";
+    cout << "\t\t\t                         Welcome to Quiz                             \n\n\n";
+    cout << "\t\t\t________________________       MENU     ______________________________\n\n\n";
+    cout << "                                                                             \n\n";
+    cout << "\t| Press 1 to EXERCISE |" << endl;
+    cout << "\t| Press 2 to QUIZ |" << endl;
+    cout << "\t| Press 3 EXIT. |" << endl;
+    cout << "Your Choice: ";
+    cin >> test;
+
+    switch(test)
+    {
+        case 1:
+            break;
+        case 2:
+            break;
+        default:
+            break;
+    }
+}
 
 void loginDialog()
 {
@@ -30,8 +57,7 @@ void loginDialog()
 }
 
 void registerDiaglog()
-{
-    
+{  
     cout << "Please Sign Up Your Infomation!" << endl;
     users.input();
     main_menu();
@@ -59,6 +85,9 @@ void main_menu()
 
     case 2:
         loginDialog();
+        break;
+    default:
+        system("cls");
         break;
     }
 }
