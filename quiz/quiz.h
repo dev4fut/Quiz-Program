@@ -3,7 +3,12 @@
 #include <iostream>
 
 using namespace std;
-void quizStart();
+
+class Quiz {
+    public:
+
+    void start();
+};
 
 
 #endif

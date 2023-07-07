@@ -3,7 +3,7 @@
 
 using namespace std;
 
-void Users::init() {
+Users::Users() {
     this->n = 0;
 }
 

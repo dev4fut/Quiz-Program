@@ -1,5 +1,6 @@
+#include <string>
 #include "classes.h"
-#include "fileio.h"
+#include "../library/fileio.h"
 
 
 using namespace std;
@@ -79,7 +80,7 @@ void Classes::write()
 void Classes::read()
 {
     FileIO file;
-    string dat = "a";
+    string dat = "";
     file.open("class");
     file.file >> dat;
     
