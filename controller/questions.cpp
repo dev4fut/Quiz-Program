@@ -12,6 +12,7 @@ void Questions::input() {
     do
     {
         data[n].input();
+        data[n].check();
         cout << "Do you want to add questions? (y/n): ";
         getline(cin, check);
         n++;
@@ -48,6 +49,7 @@ int Questions::find(int id) {
 void Questions::update(int id) {
     int i = this->find(id);
     data[i].update();
+    data[i].check();
 }
 
 void Questions::remove(int id) {
@@ -76,16 +78,23 @@ void Questions::read() {
     {
         file.file >> dat;
         this->data[i].id = stoi(dat);
-        file.file >> dat;
         this->data[i].question = dat;
-        file.file >> dat;
+        
+        getline(file.file, dat, file.file.widen('\t'));
         for (int i = 0; i < 4; i++)
         {
             this->data[i].answer[i] = dat;
         }
-        
     }
 
     cout << dat << endl;
+    file.close();
+}
+
+bool Questions::check(int check) {
+    FileIO file;
+    file.open("question");
+
+
     file.close();
 }

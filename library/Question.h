@@ -12,9 +12,11 @@ class Question
     int id;
     string question;
     string answer[4];
+    bool c[4];
     Question();
 
     void input();
+    void check();
     void output();
     string arrayToString();
     string toString();

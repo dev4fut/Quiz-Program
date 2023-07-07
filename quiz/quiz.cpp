@@ -25,4 +25,5 @@ void Quiz::start() {
         count--;
     }
     counting();
+    
 }
