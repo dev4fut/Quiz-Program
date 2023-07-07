@@ -5,11 +5,13 @@
 #include "library/subject.h"
 #include "library/class.h"
 #include "exercise/exercise.h"
+#include "quiz/quiz.h"
 #include <iostream>
 
 using namespace std;
 Users users;
 Exercise exercises;
+Quiz quiz;
 void main_menu();
 
 void testDialog()
@@ -31,6 +33,7 @@ void testDialog()
         case 1:
             break;
         case 2:
+            quiz.start();
             break;
         default:
             break;
