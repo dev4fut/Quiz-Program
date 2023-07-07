@@ -4,17 +4,18 @@
 
 using namespace std;
 
-void User::init()
+User::User()
 {
     this->id = 0;
     this->name = "";
     this->numberUser = "";
     this->grade = "";
+    this->username = "";
+    this->password = "";
 }
 
 void User::input()
 {
-
     cout << "Input User ID: ";
     cin >> this->id;
     cout << "\nUser Name: ";
@@ -32,9 +33,11 @@ void User::input()
 void User::ouptut()
 {
     cout << "ID: " << this->id;
-    cout << "Name: " << name;
-    cout << "User Number: " << numberUser;
-    cout << "User grade: " << grade;
+    cout << "Name: " << this->name;
+    cout << "User Number: " << this->numberUser;
+    cout << "User grade: " << this->grade;
+    cout << "Username: " << this->username;
+    cout << "Password: " << this->password;
 }
 
 string User::toString()
