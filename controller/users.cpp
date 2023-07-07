@@ -3,11 +3,25 @@
 
 using namespace std;
 
-Users::Users() {
+Users::Users()
+{
     this->n = 0;
 }
 
-void Users::input() {
+bool Users::checkLogin(string username, string password)
+{
+    for (int i = 0; i < this->n; i++)
+    {
+        if (username == this->data[i].username && password == this->data[i].password)
+        {
+            return true;
+        }
+    }
+    return false;
+}
+
+void Users::input()
+{
     string check;
     do
     {
@@ -18,25 +32,28 @@ void Users::input() {
     } while (check == "y");
 }
 
-void Users::output() {
+void Users::output()
+{
     for (int i = 0; i < 100; i++)
     {
         data[i].ouptut();
     }
 }
 
-string Users::toString() {
+string Users::toString()
+{
     string result = "";
 
     for (int i = 0; i < this->n; i++)
     {
         result = result + this->data[i].toString();
     }
-    
+
     return result;
 }
 
-int Users::find(int id) {
+int Users::find(int id)
+{
     int i = 0;
     while (data[i].id != id)
     {
@@ -45,26 +62,30 @@ int Users::find(int id) {
     return i;
 }
 
-void Users::update(int id) {
+void Users::update(int id)
+{
     int i = this->find(id);
     data[i].update();
 }
 
-void Users::remove(int id) {
+void Users::remove(int id)
+{
     int i = this->find(id);
     while (data[i].id != 0)
     {
-        this->data[i] = this->data[i+1];
+        this->data[i] = this->data[i + 1];
         i++;
     }
 }
 
-void Users::write() {
+void Users::write()
+{
     FileIO file;
     file.write("student", this->toString(), this->n);
 }
 
-void Users::read() {
+void Users::read()
+{
     FileIO file;
     string dat = "";
     file.open("student");
