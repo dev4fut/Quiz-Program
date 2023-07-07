@@ -1,9 +1,10 @@
 #include <iostream>
 #include <windows.h>
 #include <stdlib.h>
-#include "../library/Question.h"
-#include "../exercise/counting.h"
+#include <cmath>
+#include "../controller/questions.h"
 #include "quiz.h"
+
 
 /*
     Information User
@@ -15,7 +16,7 @@
 
 using namespace std;
 
-Question question;
+Questions questions;
 
 void Quiz::start() {
     int count = 3;
@@ -26,6 +27,7 @@ void Quiz::start() {
         Sleep(1000);
         count--;
     }
-    counting();
-    question.showIndex();
+    system("cls");
+    questions.read();
+    questions.showIndex(0);
 }

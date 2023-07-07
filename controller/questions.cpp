@@ -95,3 +95,6 @@ void Questions::read() {
     file.close();
 }
 
+bool Questions::showIndex(int index) {
+    return this->data[index].showIndex();
+}

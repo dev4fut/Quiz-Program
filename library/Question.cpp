@@ -1,5 +1,7 @@
 #include <iostream>
 #include "Question.h"
+#include "../controller/questions.h"
+#include "fileio.h"
 
 using namespace std;
 
@@ -117,6 +119,7 @@ bool Question::check(int ans) {
 
 bool Question::showIndex() {
     int ans;
+
     cout << "Question: " << this->question << endl;
     for (int i = 0; i < 4; i++)
     {
@@ -125,6 +128,8 @@ bool Question::showIndex() {
     cout << "Your answer: ";
     cin >> ans;
     getchar();
+
+
     if (check(ans))
     {
         cout << "You are dung!!!!" << endl;

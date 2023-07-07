@@ -19,6 +19,7 @@ class Questions {
     void remove(int id);
     void write();
     void read();
+    bool showIndex(int index);
 };
 
 #endif
