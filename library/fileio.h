@@ -9,13 +9,11 @@ using namespace std;
 class FileIO
 {
     public:
-        ofstream file;
-
-        FileIO();
+        fstream file;
         
         void open(string filename);
+        void write(string filename, string data, int n);
         void close();
-        void write(string data);
 };
 
 #endif

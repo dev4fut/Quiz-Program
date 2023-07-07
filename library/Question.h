@@ -9,17 +9,21 @@ using namespace std;
 class Question
 {
     public:
-    int id = 0;
+    int id;
     string question;
-    string answer;
+    string answer[4];
+    bool c[4];
+    Question();
 
-    void InputQuestion();
-    void InputAnswer();
-    void OutputQuestion();
-    void UpdateQuestion();
-    void UpdateAnswer();
-    void DeleteQuestion();
-    void CheckAnswer(int n);
+    void input();
+    void checkInput();
+    void output();
+    string arrayToString();
+    string toString();
+    void update();
+    void remove();
+    bool check(int ans);
+    bool showIndex();
 };
 
 #endif

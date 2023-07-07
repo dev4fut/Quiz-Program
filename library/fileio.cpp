@@ -1,40 +1,40 @@
 #include <iostream>
 #include <fstream>
 #include <filesystem>
+#include <unistd.h>
 #include "fileio.h"
 
 using namespace std;
-using std::filesystem::current_path;
 
-
+/*
+    getcwd() returns the current working directory
+    fpath is directory of data
+*/
 void FileIO::open(string filename)
 {
-    string path;
-    getcwd(filename);
-    FILE *file = fopen(path.c_str(), "rb+");
+    char path[256];
+    string p = getcwd(path, 256);
+    string fpath = p + "\\data\\" + filename + ".txt";
+    file.open(fpath, ios::in | ios::out);
 }
 
-void FileIO::readFile()
-{
-
+/*
+    filename: name of file which stored the data
+    data: data to store
+    n: number of bytes to store
+*/
+void FileIO::write(string filename, string data, int n) {
+    this->open(filename);
+    this->file << n;
+    this->file << "\n";
+    this->file << data;
+    file.close();
 }
 
-void FileIO::writeFile()
+/*
+    close file
+*/
+void FileIO::close()
 {
-    string path = this->file_path + this->file_name + this->file_extension;
-    ofstream writefile(path, ios::out | ios::binary);
-    if (!writeFile)
-    {
-        cout << "Cannot open file " << endl;
-        return;
-    }
-    for (int i = 0; i < sizeof(); i++)
-    {
-
-    }
-}
-
-void FileIO::closeFile(FILE *file)
-{
-    fclose(file);
+    this->file.close();
 }

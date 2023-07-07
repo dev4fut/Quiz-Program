@@ -8,16 +8,16 @@ using namespace std;
 class Subject
 {
     public:
-        int idSubject;
-        string nameSubject;
-        string descriptionSubject;
+        int id;
+        string name;
+        string description;
 
         Subject();
-        void initSubject(int idSubject, string name, string descriptionSubject);
-        void inputSubject();
-        void outputSubject();
-        void updateSubject();
-        void deleteSubject();
+        void input();
+        void output();
+        string toString();
+        void update();
+        void remove();
 };
 
 #endif
