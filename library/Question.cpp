@@ -31,6 +31,33 @@ void Question::input()
     getline(cin, this->answer[3]);
 }
 
+void Question::check() {
+    int check;
+    for (int i = 0; i < 4; i++)
+    {
+        this->c[i] = false;
+    }
+    
+    cout << "Which answer is True?: ";
+    cin >> check;
+    getchar();
+    if (check == 1)
+    {
+        this->c[0] = true;
+    } else if (check == 2)
+    {
+        this->c[1] = true;
+    } else if (check == 3)
+    {
+        this->c[2] = true;
+    } else {    this->c[3] = true;    }
+    for (int i = 0; i < 4; i++)
+    {
+        cout << c[i] << "\t";
+    }
+    
+}
+
 void Question::output()
 {
     cout << "Question " << id << ": " << question << endl;
@@ -43,9 +70,10 @@ void Question::output()
 string Question::arrayToString()
 {
     string result = "";
+    
     for (int i = 0; i < 4; i++)
     {
-        result = result + this->answer[i];
+        result = result + this->answer[i] + "\t" + to_string(this->c[i]) + "\n";
     }
     return result;
 }
@@ -53,7 +81,7 @@ string Question::arrayToString()
 string Question::toString()
 {
 
-    return "" + to_string(id) + "\t" + question + "\n" + arrayToString() + "\n";
+    return "" + to_string(id) + "\n" + this->question + "\n" + arrayToString() + "\n";
 }
 
 void Question::update()

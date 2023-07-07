@@ -28,7 +28,11 @@ int main()
     // question.output();
 
     Questions questions;
-    questions.input();
+    // questions.input();
+    // questions.output();
+    // questions.write();
+    questions.read();
     questions.output();
+    
     return 0;
 }
