@@ -31,7 +31,7 @@ void Question::input()
     getline(cin, this->answer[3]);
 }
 
-void Question::check() {
+void Question::checkInput() {
     int check;
     for (int i = 0; i < 4; i++)
     {
@@ -41,21 +41,7 @@ void Question::check() {
     cout << "Which answer is True?: ";
     cin >> check;
     getchar();
-    if (check == 1)
-    {
-        this->c[0] = true;
-    } else if (check == 2)
-    {
-        this->c[1] = true;
-    } else if (check == 3)
-    {
-        this->c[2] = true;
-    } else {    this->c[3] = true;    }
-    for (int i = 0; i < 4; i++)
-    {
-        cout << c[i] << "\t";
-    }
-    
+    this->c[check - 1] = true;
 }
 
 void Question::output()
@@ -118,4 +104,32 @@ void Question::remove()
 {
     this->id = 0;
     this->question = "";
+}
+
+bool Question::check(int ans) {
+
+    if (this->c[ans - 1])
+    {
+        return true;
+    }
+    return false;
+}
+
+bool Question::showIndex() {
+    int ans;
+    cout << "Question: " << this->question << endl;
+    for (int i = 0; i < 4; i++)
+    {
+        cout << "Answer " << i + 1 << ": " << this->answer[i] << endl;
+    }
+    cout << "Your answer: ";
+    cin >> ans;
+    getchar();
+    if (check(ans))
+    {
+        cout << "You are dung!!!!" << endl;
+        return true;
+    } 
+    cout << "You are not dung!!!!" << endl;
+    return false;
 }

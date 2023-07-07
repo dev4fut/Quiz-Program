@@ -19,7 +19,6 @@ class Questions {
     void remove(int id);
     void write();
     void read();
-    bool check(int check);
 };
 
 #endif

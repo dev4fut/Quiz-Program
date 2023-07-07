@@ -4,7 +4,6 @@
 #include "exercise/counting.h"
 #include "controller/classes.h"
 #include "controller/questions.h"
-#include "data/login.h"
 #include "quiz/quiz.h"
 
 using namespace std;
@@ -21,18 +20,19 @@ int main()
     // Quiz quiz;
     // quiz.start();
 
-    // Question question;
+    Question question;
     // question.input();
     // question.output();
     // question.update();
     // question.output();
+    question.showIndex();
 
-    Questions questions;
+    // Questions questions;
     // questions.input();
     // questions.output();
     // questions.write();
-    questions.read();
-    questions.output();
+    // questions.read();
+    // questions.output();
     
     return 0;
 }

@@ -1,7 +1,7 @@
 #include <iostream>
 #include <windows.h>
 #include <stdlib.h>
-#include "../library/question.h"
+#include "../library/Question.h"
 #include "../exercise/counting.h"
 #include "quiz.h"
 
@@ -15,6 +15,8 @@
 
 using namespace std;
 
+Question question;
+
 void Quiz::start() {
     int count = 3;
     while (count > 0)
@@ -25,5 +27,5 @@ void Quiz::start() {
         count--;
     }
     counting();
-    
+    question.showIndex();
 }

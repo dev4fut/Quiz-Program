@@ -1,3 +1,4 @@
+#include <sstream>
 #include "questions.h"
 #include "../library/fileio.h"
 
@@ -12,7 +13,7 @@ void Questions::input() {
     do
     {
         data[n].input();
-        data[n].check();
+        data[n].checkInput();
         cout << "Do you want to add questions? (y/n): ";
         getline(cin, check);
         n++;
@@ -20,6 +21,7 @@ void Questions::input() {
 }
 
 void Questions::output() {
+    cout << "Tao dang co: " << this->n << endl;
     for (int i = 0; i < this->n; i++)
     {
         data[i].output();
@@ -49,7 +51,7 @@ int Questions::find(int id) {
 void Questions::update(int id) {
     int i = this->find(id);
     data[i].update();
-    data[i].check();
+    data[i].checkInput();
 }
 
 void Questions::remove(int id) {
@@ -78,23 +80,18 @@ void Questions::read() {
     {
         file.file >> dat;
         this->data[i].id = stoi(dat);
+        file.file >> dat;
         this->data[i].question = dat;
-        
-        getline(file.file, dat, file.file.widen('\t'));
-        for (int i = 0; i < 4; i++)
+        // getline(file.file, dat, file.file.widen('\t'));
+        for (int j = 0; j < 4; j++)
         {
-            this->data[i].answer[i] = dat;
+            file.file >> dat;
+            this->data[i].answer[j] = dat;
+            file.file >> dat;
+            this->data[i].c[j] = stoi(dat);
         }
     }
-
     cout << dat << endl;
     file.close();
 }
 
-bool Questions::check(int check) {
-    FileIO file;
-    file.open("question");
-
-
-    file.close();
-}

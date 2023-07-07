@@ -16,12 +16,14 @@ class Question
     Question();
 
     void input();
-    void check();
+    void checkInput();
     void output();
     string arrayToString();
     string toString();
     void update();
     void remove();
+    bool check(int ans);
+    bool showIndex();
 };
 
 #endif
