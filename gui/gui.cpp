@@ -3,7 +3,7 @@
 #include "library/user.h"
 #include "controller/users.h"
 #include "library/subject.h"
-#include "library/class.h"
+#include "../library/class.h"
 #include "exercise/exercise.h"
 #include "quiz/quiz.h"
 #include <iostream>
