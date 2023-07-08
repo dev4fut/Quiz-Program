@@ -19,6 +19,7 @@ class Users {
     void remove(int id);
     void write();
     void read();
+    bool checkLogin(string username, string password);
 };
 
 #endif

@@ -1,34 +1,18 @@
-#include "library/subject.h"
-#include "library/user.h"
 #include "library/Question.h"
-#include "exercise/counting.h"
-#include "controller/classes.h"
 #include "controller/questions.h"
-#include "data/login.h"
-#include "quiz/quiz.h"
-
+#include "gui/quiz.h"
+#include "gui/gui.h"
 using namespace std;
 
 int main()
 {
-    // int i;
-    // Classes classes;
-    // classes.input();
-    // classes.write();
-    // classes.read();
-    // classes.output();
+    // Exercise exercise;
+    // exercise.takeExercise(2);
 
-    // Quiz quiz;
-    // quiz.start();
+    Quiz quiz;
+    quiz.quiz();
 
     // Question question;
-    // question.input();
     // question.output();
-    // question.update();
-    // question.output();
-
-    Questions questions;
-    questions.input();
-    questions.output();
     return 0;
 }

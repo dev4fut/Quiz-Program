@@ -12,14 +12,18 @@ class Question
     int id;
     string question;
     string answer[4];
+    bool c[4];
     Question();
 
     void input();
+    void checkInput();
     void output();
     string arrayToString();
     string toString();
     void update();
     void remove();
+    bool check(int ans);
+    bool showIndex();
 };
 
 #endif

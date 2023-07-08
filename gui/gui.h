@@ -1,18 +1,41 @@
 #ifndef GUI_H
 #define GUI_H
+#include "../controller/users.h"
+#include "../controller/classes.h"
+#include "../controller/subjects.h"
+#include "../controller/questions.h"
+#include "exercise.h"
+#include "quiz.h"
 
-class User
+using namespace std;
+class Gui
 {
-public:
-    int id;
-    string password;
+    public:
+    Users users;
+    Classes classes;
+    Subjects subject;
+    Questions questions;
+    Exercise exercise;
+    Quiz quiz;
 
-    void registerDialog();
-    void optionsDialog();
+    Gui();
+    void testDialog();
+
+    void loginDialog();
+
+    void registerDiaglog();
+
+    void main_menu();
+
+    void menu_CRUD();
+
+    void menu_users();
+
+    void menu_classes();
+
+    void menu_subjects();
+
+    void menu_questions();
 };
-
-    void ClassDialog();
-    void UserDialog();
-    void ExercisesOrTest();
 
 #endif

@@ -1,144 +1,143 @@
-#include <library/class.h>
-#include <library/Question.h>
-#include <library/student.h>
-#include <library/subject.h>
-#include <gui.h>
+#include "../controller/classes.h"
+#include "../controller/questions.h"
+#include "gui.h"
+#include "../library/subject.h"
+#include "../library/class.h"
+#include <iostream>
 
 using namespace std;
-// Registering System
 
-void User::registerDialog()
-{
-    cout << "User ID: " << endl;
-    cin >> this->id;
-    cout << "Passwords: " << endl;
-    cin >> this->password;
+Quiz quiz;
+
+Gui::Gui() {
+    Gui();
 }
 
-// Just some txt print out
-
-void welcomeMenu()
+void Gui::testDialog()
 {
-    cout << "\t\t\t\tWelcome To Quiz" << endl;
-}
+    int test;
+    system("cls");
+    cout << "\t\t\t____________________________________________________________________\n\n\n";
+    cout << "\t\t\t                         Welcome to Quiz                             \n\n\n";
+    cout << "\t\t\t________________________       MENU     ______________________________\n\n\n";
+    cout << "                                                                             \n\n";
+    cout << "\t| Press 1 to EXERCISE |" << endl;
+    cout << "\t| Press 2 to QUIZ |" << endl;
+    cout << "\t| Press 3 EXIT. |" << endl;
+    cout << "Your Choice: ";
+    cin >> test;
 
-void User::optionsDialog()
-{
-    cout << "\t\t\tSign in:" << endl;
-    cout << "1. Login Account" << endl;
-    cout << "2. Register Account" << endl;
-    cout << "3. Forgot Password" << endl;
-    cout << "4. Exit" << endl;
-}
-
-void ExerciseOrTest()
-{
-    cout << "You're gonna do exercise or test" << endl;
-    cout << "1. Exercise" << endl;
-    cout << "2. Test" << endl;
-    cout << "3. Exit" << endl;
-}
-
-// CRUD things
-
-void ClassDialog()
-{
-    Classroom classroom;
-    int dialog;
-    cout << "\t\t\t\t\t\tUpdate Class System\n\n\n\n\n"
-         << endl;
-    cout << "1. Create Info" << endl;
-    cout << "2. Read Info" << endl;
-    cout << "3. Update Info" << endl;
-    cout << "4. Remove Info" << endl;
-    cout << "5. Exit" << endl;
-    cin >> dialog;
-    switch (dialog)
+    switch (test)
     {
     case 1:
-        classroom.input();
+        exercise.exercise();
         break;
     case 2:
-        classroom.output();
-        break;
-    case 3:
-        classroom.update();
-        break;
-    case 4:
-        classroom.remove();
+        quiz.quiz();
         break;
     default:
+        system("exit");
         break;
     }
 }
 
-void UserDialog()
+void Gui::loginDialog()
 {
-    User student;
-    int dialog;
-    cout << "\t\t\t\t\t\tUpdate User System\n\n\n\n\n" << endl;
-    cout << "1. Create Info" << endl;
-    cout << "2. Read Info" << endl;
-    cout << "3. Update Info" << endl;
-    cout << "4. Remove Info" << endl;
-    cout << "5. Exit" << endl;
-    cin >> dialog;
-    switch (dialog)
+    string checkusername, checkpassword;
+
+    cout << "Username: ";
+    getline(cin, checkusername);
+    cout << "Password: ";
+    getline(cin, checkpassword);
+    if (users.checkLogin(checkusername, checkpassword))
+    {
+        cout << "You're Right";
+        testDialog();
+    }
+    else
+    {
+        cout << "You're Left";
+        main_menu();
+    }
+}
+
+void Gui::registerDiaglog()
+{
+    cout << "Please Sign Up Your Infomation!" << endl;
+    users.input();
+    main_menu();
+}
+
+void Gui::main_menu()
+{
+    int c;
+    system("cls");
+    cout << "\t\t\t____________________________________________________________________\n\n\n";
+    cout << "\t\t\t                         Welcome to Quiz                             \n\n\n";
+    cout << "\t\t\t________________________       MENU     ______________________________\n\n\n";
+    cout << "                                                                             \n\n";
+    cout << "\t| Press 1 to SIGNUP |" << endl;
+    cout << "\t| Press 2 to LOGIN |" << endl;
+    cout << "\t| Press 3 EXIT. |" << endl;
+    cout << "Your Choice: ";
+    cin >> c;
+
+    switch (c)
     {
     case 1:
-        student.input();
-        student.ouptut();
+        registerDiaglog();
         break;
+
     case 2:
-        student.ouptut();
-        break;
-    case 3:
-        student.update();
-        student.ouptut();
-        break;
-    case 4:
-        student.remove();
-        student.ouptut();
+        loginDialog();
         break;
     default:
+        system("cls");
         break;
     }
 }
 
-void QuestionDialog()
-{
-
+void Gui::menu_users() {
+    
 }
 
-void SubjectDialog()
+void Gui::menu_CRUD()
 {
-    Subject subject;
-    int dialog;
-    cout << "\t\t\t\t\t\tUpdate User System\n\n\n\n\n" << endl;
-    cout << "1. Create Info" << endl;
-    cout << "2. Read Info" << endl;
-    cout << "3. Update Info" << endl;
-    cout << "4. Remove Info" << endl;
-    cout << "5. Exit" << endl;
-    cin >> dialog;
-    switch (dialog)
+    int c;
+    system("cls");
+    cout << "\t\t\t____________________________________________________________________\n\n\n";
+    cout << "\t\t\t                         Welcome to Quiz                             \n\n\n";
+    cout << "\t\t\t________________________       MENU     ______________________________\n\n\n";
+    cout << "                                                                             \n\n";
+    cout << "\t| Press 1 to Menu USERS |" << endl;
+    cout << "\t| Press 2 to Menu CLASSES |" << endl;
+    cout << "\t| Press 4 to Menu SUBJECTS |" << endl;
+    cout << "\t| Press 3 to Menu QUESTIONS |" << endl;
+    cout << "\t| Press 5 to Menu TESTS |" << endl;
+    cout << "\t| Press 6 EXIT. |" << endl;
+    cout << "Your Choice: ";
+    cin >> c;
+    getchar();
+    switch (c)
     {
     case 1:
-        subject.input();
-        subject.output();
+        menu_users();
         break;
+
     case 2:
-        subject.output();
+        menu_classes();
         break;
     case 3:
-        subject.update();
-        subject.output();
+        menu_subjects();
         break;
     case 4:
-        subject.output();
-        subject.remove();
+        menu_questions();
+        break;
+    case 5:
+        testDialog();
         break;
     default:
+        system("cls");
         break;
     }
 }

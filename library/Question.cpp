@@ -1,5 +1,7 @@
 #include <iostream>
 #include "Question.h"
+#include "../controller/questions.h"
+#include "fileio.h"
 
 using namespace std;
 
@@ -31,21 +33,36 @@ void Question::input()
     getline(cin, this->answer[3]);
 }
 
-void Question::output()
-{
-    cout << "Question " << id << ": " << question << endl;
+void Question::checkInput() {
+    int check;
     for (int i = 0; i < 4; i++)
     {
-        cout << "answer " << i + 1 << ": " << answer[i] << endl;
+        this->c[i] = false;
+    }
+    
+    cout << "Which answer is True?: ";
+    cin >> check;
+    getchar();
+    this->c[check - 1] = true;
+}
+
+void Question::output()
+{
+    cout << "\t\t\t\t\tQuestion " << id << ": " << question << endl;
+    cout << "\t\t\t---------------------------------------------" << endl;
+    for (int i = 0; i < 4; i++)
+    {
+        cout << "\t\t\t\t\tanswer " << i + 1 << ": " << answer[i] << endl;
     }
 }
 
 string Question::arrayToString()
 {
     string result = "";
+    
     for (int i = 0; i < 4; i++)
     {
-        result = result + this->answer[i];
+        result = result + this->answer[i] + "\t" + to_string(this->c[i]) + "\n";
     }
     return result;
 }
@@ -53,7 +70,7 @@ string Question::arrayToString()
 string Question::toString()
 {
 
-    return "" + to_string(id) + "\t" + question + "\n" + arrayToString() + "\n";
+    return "" + to_string(id) + "\n" + this->question + "\n" + arrayToString() + "\n";
 }
 
 void Question::update()
@@ -90,4 +107,35 @@ void Question::remove()
 {
     this->id = 0;
     this->question = "";
+}
+
+bool Question::check(int ans) {
+
+    if (this->c[ans - 1])
+    {
+        return true;
+    }
+    return false;
+}
+
+bool Question::showIndex() {
+    int ans;
+
+    cout << "Question: " << this->question << endl;
+    for (int i = 0; i < 4; i++)
+    {
+        cout << "Answer " << i + 1 << ": " << this->answer[i] << endl;
+    }
+    cout << "Your answer: ";
+    cin >> ans;
+    getchar();
+
+
+    if (check(ans))
+    {
+        cout << "You are dung!!!!" << endl;
+        return true;
+    } 
+    cout << "You are not dung!!!!" << endl;
+    return false;
 }
