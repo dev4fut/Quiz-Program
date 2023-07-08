@@ -1,8 +1,8 @@
 #ifndef GUI_H
 #define GUI_H
 #include "../controller/users.h"
-#include "../exercise/exercise.h"
-#include "../quiz/quiz.h"
+#include "exercise.h"
+#include "quiz.h"
 
 using namespace std;
 class Gui

@@ -96,5 +96,6 @@ void Questions::read() {
 }
 
 bool Questions::showIndex(int index) {
+    system("cls");
     return this->data[index].showIndex();
 }

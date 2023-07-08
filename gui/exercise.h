@@ -8,6 +8,7 @@ class Exercise
     public:
     Exercise();
     void exerciseStart();
+    void takeExercise(int numEx);
 };
 
 #endif
