@@ -9,3 +9,13 @@ Score::Score(int total)
     this->total = total;
     this->correct = 0;
 }
+
+void Score::countTrue()
+{
+    
+}
+
+void Score::calcScore()
+{
+
+}
