@@ -16,8 +16,6 @@
 
 using namespace std;
 
-Questions questions;
-
 void Quiz::start() {
     int count = 3;
     while (count > 0)
