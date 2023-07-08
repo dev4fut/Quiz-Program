@@ -12,15 +12,11 @@ class Gui
 {
     public:
     Users users;
-<<<<<<< HEAD
-    Exercise exercises;
-=======
     Classes classes;
     Subjects subject;
     Questions questions;
     Exercise exercise;
     Quiz quiz;
->>>>>>> origin/ram-2-khe
 
     Gui();
     void testDialog();
