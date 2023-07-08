@@ -1,10 +1,11 @@
 #include <iostream>
-#include "controller/questions.h"
+#include "../controller/questions.h"
+#include "score.h"
 
 using namespace std;
 
-void scoreCalclating()
+Score::Score(int total)
 {
-    Questions questions;
-    int total_score = 10;
+    this->total = total;
+    this->correct = 0;
 }

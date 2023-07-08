@@ -1,12 +1,12 @@
 #include "library/Question.h"
 #include "controller/questions.h"
-#include "quiz/quiz.h"
+#include "gui/quiz.h"
 #include "gui/gui.h"
 using namespace std;
 
 int main()
 {
-    Gui gui;
-    gui.main_menu();
+    Quiz quiz;
+    quiz.start();
     return 0;
 }

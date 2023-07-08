@@ -95,15 +95,7 @@ void Questions::read() {
     file.close();
 }
 
-<<<<<<< HEAD
-bool Questions::check(int check) {
-    FileIO file;
-    file.open("question");
-    // if check == true, i++. If false, keep i, take (10 / n) * i = score
-
-    file.close();
-=======
 bool Questions::showIndex(int index) {
+    system("cls");
     return this->data[index].showIndex();
->>>>>>> ram-1-khe
 }
