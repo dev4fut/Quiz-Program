@@ -1,4 +1,5 @@
 #include <sstream>
+#include <windows.h>
 #include "questions.h"
 #include "../library/fileio.h"
 

@@ -4,19 +4,16 @@
 #include <cmath>
 #include "../controller/questions.h"
 #include "quiz.h"
-
-
-/*
-    Information User
-    Question
-    Answers
-    Time
-    True False
-*/
+#include "../controller/score.h"
 
 using namespace std;
 
-void Quiz::start() {
+Quiz::Quiz() {
+    this->questions.read();
+}
+
+void Quiz::quizStart() {
+    
     int count = 3;
     while (count > 0)
     {
@@ -26,6 +23,27 @@ void Quiz::start() {
         count--;
     }
     system("cls");
-    questions.read();
-    questions.showIndex(0);
+}
+
+void Quiz::takeQuiz(int numEx) {
+    for (int i = 0; i < numEx; i++)
+    {
+        if (questions.showIndex(rand() % questions.n))
+        {
+            score.countTrue();
+        }
+    }
+    system("cls");
+    cout << "===============================" << endl;
+    cout << "======= Your score is " << score.calcScore() << " ======" << "\n";
+    cout << "===============================" << endl;
+}
+
+void Quiz::quiz() {
+    int num;
+    cout << "Ban muon lam bao nhiu?: ";
+    cin >> num;
+    getchar();
+    quizStart();
+    takeQuiz(num);
 }

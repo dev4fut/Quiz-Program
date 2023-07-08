@@ -1,6 +1,9 @@
 #ifndef GUI_H
 #define GUI_H
 #include "../controller/users.h"
+#include "../controller/classes.h"
+#include "../controller/subjects.h"
+#include "../controller/questions.h"
 #include "exercise.h"
 #include "quiz.h"
 
@@ -9,7 +12,10 @@ class Gui
 {
     public:
     Users users;
-    Exercise exercises;
+    Classes classes;
+    Subjects subject;
+    Questions questions;
+    Exercise exercise;
     Quiz quiz;
 
     Gui();
@@ -20,6 +26,16 @@ class Gui
     void registerDiaglog();
 
     void main_menu();
+
+    void menu_CRUD();
+
+    void menu_users();
+
+    void menu_classes();
+
+    void menu_subjects();
+
+    void menu_questions();
 };
 
 #endif

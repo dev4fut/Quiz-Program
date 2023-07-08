@@ -10,9 +10,10 @@ class Score
     public:
     int total;
     int correct;
+    Score();
     Score(int total);
     void countTrue();
-    void calcScore();
+    float calcScore();
 };
 
 #endif

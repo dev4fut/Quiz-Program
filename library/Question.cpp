@@ -48,10 +48,11 @@ void Question::checkInput() {
 
 void Question::output()
 {
-    cout << "Question " << id << ": " << question << endl;
+    cout << "\t\t\t\t\tQuestion " << id << ": " << question << endl;
+    cout << "\t\t\t---------------------------------------------" << endl;
     for (int i = 0; i < 4; i++)
     {
-        cout << "answer " << i + 1 << ": " << answer[i] << endl;
+        cout << "\t\t\t\t\tanswer " << i + 1 << ": " << answer[i] << endl;
     }
 }
 
