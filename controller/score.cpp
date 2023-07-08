@@ -16,7 +16,6 @@ Score::Score(int total)
     this->correct = 0;
 }
 
-<<<<<<< HEAD
 void Score::countTrue() {
     this->correct++;
 }
@@ -25,14 +24,3 @@ void Score::countTrue() {
 float Score::calcScore() {
     return round(4 * this->correct * 10 / this->total) / 4;
 }
-=======
-void Score::countTrue()
-{
-    
-}
-
-void Score::calcScore()
-{
-
-}
->>>>>>> 22cf3d6bcfd0d8ba903e13be9bbed839efce5e00
