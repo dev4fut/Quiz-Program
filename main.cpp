@@ -6,7 +6,13 @@ using namespace std;
 
 int main()
 {
+    // Exercise exercise;
+    // exercise.takeExercise(2);
+
     Quiz quiz;
-    quiz.start();
+    quiz.quiz();
+
+    // Question question;
+    // question.output();
     return 0;
 }
