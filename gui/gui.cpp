@@ -1,22 +1,17 @@
-<<<<<<< HEAD
-#include "library/class.h"
-#include "library/Question.h"
-#include "library/user.h"
-#include "controller/users.h"
-#include "library/subject.h"
-#include "../library/class.h"
-#include "exercise/exercise.h"
-#include "quiz/quiz.h"
-=======
 #include "../controller/classes.h"
 #include "../controller/questions.h"
 #include "gui.h"
 #include "../library/subject.h"
 #include "../library/class.h"
->>>>>>> 04b30f3ed9ada768368e8d129637db41142eb591
 #include <iostream>
 
 using namespace std;
+
+Quiz quiz;
+
+Gui::Gui() {
+    Gui();
+}
 
 void Gui::testDialog()
 {

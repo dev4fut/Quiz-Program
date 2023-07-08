@@ -5,7 +5,6 @@
 
 using namespace std;
 
-void Exercise::exerciseStart()
-{
-    
+Exercise::Exercise() {
+    Exercise();
 }

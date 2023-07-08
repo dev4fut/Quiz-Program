@@ -10,7 +10,6 @@ class Gui
     public:
     Users users;
     Exercise exercises;
-    Quiz quiz;
 
     Gui();
     void testDialog();

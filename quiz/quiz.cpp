@@ -26,35 +26,35 @@ void Quiz::start() {
     int random;
     int array[questions.n - 1];
 
-    for (int i = 0; i < questions.n; i++)
-    {
-        array[i] = 100;
-    }
-    
-    
-    // while (count > 0)
+    // for (int i = 0; i < questions.n; i++)
     // {
-    //     system("cls");
-    //     cout << "\t\t\t\tStarting in " << count;
-    //     Sleep(1000);
-    //     count--;
+    //     array[i] = 100;
     // }
-    // system("cls");
-    for (int i = 0; i < questions.n; i++)
+    
+    
+    while (count > 0)
     {
-        random = rand() % questions.n;
-        if (random != array[a])
-        {
-            /* code */
-        }
-        
-        // system("cls");
-        questions.showIndex(random);
-        array[a] = random;
-        cout << "array " << a << ": " << array[a] << endl;
-        a++;
+        system("cls");
+        cout << "\t\t\t\tStarting in " << count;
+        Sleep(1000);
+        count--;
     }
-}
+    system("cls");
+//     for (int i = 0; i < questions.n; i++)
+//     {
+//         random = rand() % questions.n;
+//         if (random != array[a])
+//         {
+//             /* code */
+//         }
+        
+//         // system("cls");
+//         questions.showIndex(random);
+//         array[a] = random;
+//         cout << "array " << a << ": " << array[a] << endl;
+//         a++;
+//     }
+// }
 
 // while (pos < questions.n + 1)
 //         {
@@ -77,3 +77,4 @@ void Quiz::start() {
 //             break;
 //             pos++;
 //         }
+}
