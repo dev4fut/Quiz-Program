@@ -1,20 +1,13 @@
-#include "library/class.h"
-#include "library/Question.h"
-#include "library/user.h"
-#include "controller/users.h"
-#include "library/subject.h"
-#include "library/class.h"
-#include "exercise/exercise.h"
-#include "quiz/quiz.h"
+#include "../controller/classes.h"
+#include "../controller/questions.h"
+#include "gui.h"
+#include "../library/subject.h"
+#include "../library/class.h"
 #include <iostream>
 
 using namespace std;
-Users users;
-Exercise exercises;
-Quiz quiz;
-void main_menu();
 
-void testDialog()
+void Gui::testDialog()
 {
     int test;
     system("cls");
@@ -40,7 +33,7 @@ void testDialog()
     }
 }
 
-void loginDialog()
+void Gui::loginDialog()
 {
     string checkusername, checkpassword;
 
@@ -59,14 +52,14 @@ void loginDialog()
     }
 }
 
-void registerDiaglog()
+void Gui::registerDiaglog()
 {  
     cout << "Please Sign Up Your Infomation!" << endl;
     users.input();
     main_menu();
 }
 
-void main_menu()
+void Gui::main_menu()
 {
     int c;
     system("cls");
