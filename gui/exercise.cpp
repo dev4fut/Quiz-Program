@@ -11,11 +11,7 @@ Exercise::Exercise() {
 
 void Exercise::exerciseStart()
 {
-    int num;
     int count = 3;
-    cout << "Ban muon lam bao nhiu?: ";
-    cin >> num;
-    getchar();
     while (count > 0)
     {
         system("cls");
@@ -23,10 +19,9 @@ void Exercise::exerciseStart()
         Sleep(1000);
         count--;
     }
-    this->takeExercise(num);
 }
 
-void Exercise::takeExercise(int numEx)
+float Exercise::takeExercise(int numEx)
 {  
     
     for (int i = 0; i < numEx; i++)
@@ -49,4 +44,8 @@ void Exercise::exercise() {
     getchar();
     exerciseStart();
     takeExercise(num);
+}
+
+void Exercise::quiz() {
+    
 }
