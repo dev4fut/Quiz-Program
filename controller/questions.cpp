@@ -72,18 +72,18 @@ void Questions::write() {
 
 void Questions::read() {
     FileIO file;
-    string dat = "";
+    string dat = "0";
     file.open("question");
     file.file >> dat;
 
     this->n = stoi(dat);
+    cout << "question: " << dat << endl;
     for (int i = 0; i < this->n; i++)
     {
         file.file >> dat;
         this->data[i].id = stoi(dat);
         file.file >> dat;
         this->data[i].question = dat;
-        // getline(file.file, dat, file.file.widen('\t'));
         for (int j = 0; j < 4; j++)
         {
             file.file >> dat;

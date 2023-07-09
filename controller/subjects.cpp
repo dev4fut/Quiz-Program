@@ -62,9 +62,10 @@ void Subjects::write() {
 
 void Subjects::read() {
     FileIO file;
-    string dat = "";
+    string dat = "0";
 
-    this->n = stoi(dat);
+    this->n = stoi(dat, nullptr, 2);
+    cout << "subjects: " << dat << endl;
     for (int i = 0; i < this->n; i++)
     {
         file.file >> dat;

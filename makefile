@@ -7,6 +7,6 @@ GUI := $(wildcard ./gui/*.cpp)
 trial:
 	@echo "Running..."
 	cls
-	g++ $(LIBRARY) $(CONTROLLER) $(GUI) main.cpp -o a.o
+	gcc $(LIBRARY) $(CONTROLLER) $(GUI) main.cpp -o a.o
 	./a.o
 	del a.o

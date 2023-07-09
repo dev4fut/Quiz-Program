@@ -19,6 +19,7 @@ class Gui
     Quiz quiz;
 
     Gui();
+
     void testDialog();
 
     void loginDialog();

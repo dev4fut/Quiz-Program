@@ -87,10 +87,11 @@ void Users::write()
 void Users::read()
 {
     FileIO file;
-    string dat = "";
+    string dat = "0";
     file.open("student");
 
     this->n = stoi(dat);
+    cout << "users: " << dat << endl;
     for (int i = 0; i < this->n; i++)
     {
         file.file >> dat;

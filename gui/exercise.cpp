@@ -6,7 +6,7 @@
 using namespace std;
 
 Exercise::Exercise() {
-    this->questions.read();
+    this->questions.n;
 }
 
 void Exercise::exerciseStart()
@@ -21,7 +21,7 @@ void Exercise::exerciseStart()
     }
 }
 
-float Exercise::takeExercise(int numEx)
+void Exercise::takeExercise(int numEx)
 {  
     
     for (int i = 0; i < numEx; i++)
@@ -44,8 +44,4 @@ void Exercise::exercise() {
     getchar();
     exerciseStart();
     takeExercise(num);
-}
-
-void Exercise::quiz() {
-    
 }
