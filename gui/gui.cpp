@@ -4,16 +4,22 @@
 #include "../library/subject.h"
 #include "../library/class.h"
 #include <iostream>
+#include <windows.h>
+#include <string>
 
 using namespace std;
 
-Quiz quiz;
-
 Gui::Gui() {
-    users.read();
-    classes.read();
-    subjects.read();
-    questions.read();
+    this->users.read();
+    this->classes.read();
+    this->subjects.read();
+    this->questions.read();
+}
+
+const char* getString(char x) {
+    string s(1, x);
+    const char* p = s.c_str();
+    return p;
 }
 
 void Gui::testDialog()
@@ -47,16 +53,24 @@ void Gui::testDialog()
 void Gui::loginDialog()
 {
     string checkusername, checkpassword;
+    const char* s1("g");
+    const char* s2("v");
 
     cout << "Username: ";
     getline(cin, checkusername);
     cout << "Password: ";
     getline(cin, checkpassword);
+
     if (users.checkLogin(checkusername, checkpassword))
     {
         cout << "You're Right";
+        if (strcmp(getString(checkusername.at(0)), s1) == 0 && strcmp(getString(checkusername.at(1)), s2) == 0)
+        {
+            menu_CRUD();
+        }
+        
         testDialog();
-    }
+    } 
     else
     {
         cout << "You're Left";
@@ -95,7 +109,7 @@ void Gui::main_menu()
         loginDialog();
         break;
     default:
-        system("cls");
+        system("exit");
         break;
     }
 }
