@@ -9,7 +9,7 @@
 using namespace std;
 
 Quiz::Quiz() {
-    this->questions.read();
+    this->questions.n;
 }
 
 void Quiz::quizStart() {

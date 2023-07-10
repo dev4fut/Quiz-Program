@@ -80,11 +80,12 @@ void Classes::write()
 void Classes::read()
 {
     FileIO file;
-    string dat = "";
+    string dat = "0";
     file.open("class");
     file.file >> dat;
     
     this->n = stoi(dat);
+    cout << "classes: " << dat << endl;
     for (int i = 0; i < this->n; i++)
     {
         file.file >> dat;
