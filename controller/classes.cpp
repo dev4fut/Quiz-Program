@@ -80,7 +80,7 @@ void Classes::write()
 void Classes::read()
 {
     FileIO file;
-    string dat = "";
+    string dat = "0";
     file.open("class");
     file.file >> dat;
     

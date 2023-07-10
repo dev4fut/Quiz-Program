@@ -10,7 +10,10 @@ using namespace std;
 Quiz quiz;
 
 Gui::Gui() {
-    Gui();
+    users.read();
+    classes.read();
+    subjects.read();
+    questions.read();
 }
 
 void Gui::testDialog()
@@ -47,6 +50,7 @@ void Gui::loginDialog()
 
     cout << "Username: ";
     getline(cin, checkusername);
+    getchar();
     cout << "Password: ";
     getline(cin, checkpassword);
     if (users.checkLogin(checkusername, checkpassword))
@@ -99,6 +103,18 @@ void Gui::main_menu()
 
 void Gui::menu_users() {
     
+}
+
+void Gui::menu_classes() {
+
+}
+
+void Gui::menu_subjects() {
+
+}
+
+void Gui::menu_questions() {
+
 }
 
 void Gui::menu_CRUD()

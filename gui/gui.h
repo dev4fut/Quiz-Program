@@ -13,7 +13,7 @@ class Gui
     public:
     Users users;
     Classes classes;
-    Subjects subject;
+    Subjects subjects;
     Questions questions;
     Exercise exercise;
     Quiz quiz;

@@ -87,7 +87,7 @@ void Users::write()
 void Users::read()
 {
     FileIO file;
-    string dat = "";
+    string dat = "0";
     file.open("student");
 
     this->n = stoi(dat);

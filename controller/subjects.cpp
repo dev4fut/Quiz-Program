@@ -62,7 +62,7 @@ void Subjects::write() {
 
 void Subjects::read() {
     FileIO file;
-    string dat = "";
+    string dat = "0";
 
     this->n = stoi(dat);
     for (int i = 0; i < this->n; i++)
