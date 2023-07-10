@@ -166,7 +166,67 @@ void Gui::menu_users() {
 }
 
 void Gui::menu_classes() {
-
+    int id;
+    int c;
+    system("cls");
+    cout << "\t\t\t____________________________________________________________________\n\n\n";
+    cout << "\t\t\t                         Welcome to Quiz                             \n\n\n";
+    cout << "\t\t\t______________________      MENU CLASS    ____________________________\n\n\n";
+    cout << "                                                                             \n\n";
+    cout << "\t| Press 1 to INPUT CLASSES |" << endl;
+    cout << "\t| Press 2 to OUTPUT CLASSES |" << endl;
+    cout << "\t| Press 3 to UPDATE CLASSES |" << endl;
+    cout << "\t| Press 4 to REMOVE CLASSES |" << endl;
+    cout << "\t| Press 5 to return MENU CRUD |" << endl;
+    cout << "\t| Press 6 EXIT. |" << endl;
+    cout << "Your Choice: ";
+    cin >> c;
+    getchar();
+    switch (c) {
+        case 1:
+            classes.input();
+            break;
+        case 2:
+            classes.output();
+            break;
+        case 3:
+            cout << "\t\t\t-------------------------------- UPDATE --------------------------------\n\n" << endl;
+            cout << "Choose id to update: ";
+            cin >> id;
+            getchar();
+            if (id < classes.n + 1)
+            {
+                classes.update(id);
+            } else
+            {
+                cout << "<<<<<< NO FOUND THAT ID. >>>>>>\n";
+                cout << "You will be returned to MENU CLASS.";
+                menu_classes();
+            }
+            break;
+        case 4:
+            cout << "\t\t\t-------------------------------- UPDATE --------------------------------\n\n" << endl;
+            cout << "Choose id to remove: ";
+            cin >> id;
+            getchar();
+            if (id < classes.n + 1)
+            {
+                classes.remove(id);
+                cout << "Removed class " << id << endl;
+            } else
+            {
+                cout << "<<<<<< NO FOUND THAT ID. >>>>>>\n";
+                cout << "You will be returned to MENU CLASS.";
+                menu_classes();
+            }
+            break;
+        case 5:
+            menu_CRUD();
+            break;
+        default:
+            system("exit");
+            break;
+    }
 }
 
 void Gui::menu_subjects() {
