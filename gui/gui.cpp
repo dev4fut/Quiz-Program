@@ -10,6 +10,7 @@
 using namespace std;
 
 Gui::Gui() {
+<<<<<<< HEAD
     this->users.read();
     this->classes.read();
     this->subjects.read();
@@ -20,6 +21,12 @@ const char* getString(char x) {
     string s(1, x);
     const char* p = s.c_str();
     return p;
+=======
+    users.read();
+    classes.read();
+    subjects.read();
+    questions.read();
+>>>>>>> 0cd8872a8c4a21b2817e433877475179d42971ad
 }
 
 void Gui::testDialog()
@@ -58,6 +65,7 @@ void Gui::loginDialog()
 
     cout << "Username: ";
     getline(cin, checkusername);
+    getchar();
     cout << "Password: ";
     getline(cin, checkpassword);
 
