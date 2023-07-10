@@ -102,7 +102,67 @@ void Gui::main_menu()
 }
 
 void Gui::menu_users() {
-    
+    int id;
+    int c;
+    system("cls");
+    cout << "\t\t\t____________________________________________________________________\n\n\n";
+    cout << "\t\t\t                         Welcome to Quiz                             \n\n\n";
+    cout << "\t\t\t______________________       MENU USER    ____________________________\n\n\n";
+    cout << "                                                                             \n\n";
+    cout << "\t| Press 1 to INPUT USERS |" << endl;
+    cout << "\t| Press 2 to OUTPUT USERS |" << endl;
+    cout << "\t| Press 3 to UPDATE USERS |" << endl;
+    cout << "\t| Press 4 to REMOVE USERS |" << endl;
+    cout << "\t| Press 5 to return MENU CRUD |" << endl;
+    cout << "\t| Press 6 EXIT. |" << endl;
+    cout << "Your Choice: ";
+    cin >> c;
+    getchar();
+    switch (c) {
+        case 1:
+            users.input();
+            break;
+        case 2:
+            users.output();
+            break;
+        case 3:
+            cout << "\t\t\t-------------------------------- UPDATE --------------------------------\n\n" << endl;
+            cout << "Choose id to update: ";
+            cin >> id;
+            getchar();
+            if (id < users.n + 1)
+            {
+                users.update(id);
+            } else
+            {
+                cout << "<<<<<< NO FOUND THAT ID. >>>>>>\n";
+                cout << "You will be returned to MENU USER.";
+                menu_users();
+            }
+            break;
+        case 4:
+            cout << "\t\t\t-------------------------------- UPDATE --------------------------------\n\n" << endl;
+            cout << "Choose id to remove: ";
+            cin >> id;
+            getchar();
+            if (id < users.n + 1)
+            {
+                users.remove(id);
+                cout << "Removed user " << id << endl;
+            } else
+            {
+                cout << "<<<<<< NO FOUND THAT ID. >>>>>>\n";
+                cout << "You will be returned to MENU USER.";
+                menu_users();
+            }
+            break;
+        case 5:
+            menu_CRUD();
+            break;
+        default:
+            system("exit");
+            break;
+    }
 }
 
 void Gui::menu_classes() {
