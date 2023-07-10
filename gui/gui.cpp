@@ -230,11 +230,131 @@ void Gui::menu_classes() {
 }
 
 void Gui::menu_subjects() {
-
+    int id;
+    int c;
+    system("cls");
+    cout << "\t\t\t____________________________________________________________________\n\n\n";
+    cout << "\t\t\t                         Welcome to Quiz                             \n\n\n";
+    cout << "\t\t\t____________________      MENU SUBJECT    __________________________\n\n\n";
+    cout << "                                                                             \n\n";
+    cout << "\t| Press 1 to INPUT SUBJECT |" << endl;
+    cout << "\t| Press 2 to OUTPUT QUESTIO |" << endl;
+    cout << "\t| Press 3 to UPDATE SUBJECT |" << endl;
+    cout << "\t| Press 4 to REMOVE SUBJECT |" << endl;
+    cout << "\t| Press 5 to return MENU CRUD |" << endl;
+    cout << "\t| Press 6 EXIT. |" << endl;
+    cout << "Your Choice: ";
+    cin >> c;
+    getchar();
+    switch (c) {
+        case 1:
+            subjects.input();
+            break;
+        case 2:
+            subjects.output();
+            break;
+        case 3:
+            cout << "\t\t\t-------------------------------- UPDATE --------------------------------\n\n" << endl;
+            cout << "Choose id to update: ";
+            cin >> id;
+            getchar();
+            if (id < subjects.n + 1)
+            {
+                subjects.update(id);
+            } else
+            {
+                cout << "<<<<<< NO FOUND THAT ID. >>>>>>\n";
+                cout << "You will be returned to MENU SUBJECT.";
+                menu_subjects();
+            }
+            break;
+        case 4:
+            cout << "\t\t\t-------------------------------- UPDATE --------------------------------\n\n" << endl;
+            cout << "Choose id to remove: ";
+            cin >> id;
+            getchar();
+            if (id < subjects.n + 1)
+            {
+                subjects.remove(id);
+                cout << "Removed subject " << id << endl;
+            } else
+            {
+                cout << "<<<<<< NO FOUND THAT ID. >>>>>>\n";
+                cout << "You will be returned to MENU SUBJECT.";
+                menu_subjects();
+            }
+            break;
+        case 5:
+            menu_CRUD();
+            break;
+        default:
+            system("exit");
+            break;
+    }
 }
 
 void Gui::menu_questions() {
-
+    int id;
+    int c;
+    system("cls");
+    cout << "\t\t\t____________________________________________________________________\n\n\n";
+    cout << "\t\t\t                         Welcome to Quiz                             \n\n\n";
+    cout << "\t\t\t____________________      MENU QUESTION    __________________________\n\n\n";
+    cout << "                                                                             \n\n";
+    cout << "\t| Press 1 to INPUT QUESTION |" << endl;
+    cout << "\t| Press 2 to OUTPUT QUESTIO |" << endl;
+    cout << "\t| Press 3 to UPDATE QUESTION |" << endl;
+    cout << "\t| Press 4 to REMOVE QUESTION |" << endl;
+    cout << "\t| Press 5 to return MENU CRUD |" << endl;
+    cout << "\t| Press 6 EXIT. |" << endl;
+    cout << "Your Choice: ";
+    cin >> c;
+    getchar();
+    switch (c) {
+        case 1:
+            questions.input();
+            break;
+        case 2:
+            questions.output();
+            break;
+        case 3:
+            cout << "\t\t\t-------------------------------- UPDATE --------------------------------\n\n" << endl;
+            cout << "Choose id to update: ";
+            cin >> id;
+            getchar();
+            if (id < questions.n + 1)
+            {
+                questions.update(id);
+            } else
+            {
+                cout << "<<<<<< NO FOUND THAT ID. >>>>>>\n";
+                cout << "You will be returned to MENU QUESTION.";
+                menu_questions();
+            }
+            break;
+        case 4:
+            cout << "\t\t\t-------------------------------- UPDATE --------------------------------\n\n" << endl;
+            cout << "Choose id to remove: ";
+            cin >> id;
+            getchar();
+            if (id < questions.n + 1)
+            {
+                questions.remove(id);
+                cout << "Removed QUESTION " << id << endl;
+            } else
+            {
+                cout << "<<<<<< NO FOUND THAT ID. >>>>>>\n";
+                cout << "You will be returned to MENU QUESTION.";
+                menu_questions();
+            }
+            break;
+        case 5:
+            menu_CRUD();
+            break;
+        default:
+            system("exit");
+            break;
+    }
 }
 
 void Gui::menu_CRUD()
