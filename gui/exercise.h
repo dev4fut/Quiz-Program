@@ -12,9 +12,8 @@ class Exercise
     Score score;
     Exercise();
     void exerciseStart();
-    float takeExercise(int numEx);
+    void takeExercise(int numEx);
     void exercise();
-    void quiz();
 };
 
 #endif
