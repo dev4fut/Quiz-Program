@@ -12,15 +12,8 @@ Quiz::Quiz() {
     this->questions.read();
 }
 
-<<<<<<< HEAD
-void Quiz::start() {
-    questions.read();
-    int a = 0;
-    int pos = 0;
-=======
 void Quiz::quizStart() {
     
->>>>>>> origin/ram-2-khe
     int count = 3;
     int random;
     int array[questions.n - 1];
@@ -39,45 +32,6 @@ void Quiz::quizStart() {
         count--;
     }
     system("cls");
-<<<<<<< HEAD
-//     for (int i = 0; i < questions.n; i++)
-//     {
-//         random = rand() % questions.n;
-//         if (random != array[a])
-//         {
-//             /* code */
-//         }
-        
-//         // system("cls");
-//         questions.showIndex(random);
-//         array[a] = random;
-//         cout << "array " << a << ": " << array[a] << endl;
-//         a++;
-//     }
-// }
-
-// while (pos < questions.n + 1)
-//         {
-//             int j = 0;
-//             random = rand() % questions.n;
-//             cout << "random: " << random << endl;
-//             while (j < pos + 1)
-//             {
-//                 cout << "in while 2: " << array[j] << endl;
-//                 if (random == array[j])
-//                 {
-//                     cout << "in if: " << array[j] << endl;
-//                     break;
-//                 }
-//                 else
-//                 {
-//                     j++;
-//                 }
-//             }
-//             break;
-//             pos++;
-//         }
-=======
 }
 
 void Quiz::takeQuiz(int numEx) {
@@ -96,10 +50,9 @@ void Quiz::takeQuiz(int numEx) {
 
 void Quiz::quiz() {
     int num;
-    cout << "Ban muon lam bao nhiu?: ";
+    cout << "How many tests you want to do?: ";
     cin >> num;
     getchar();
     quizStart();
     takeQuiz(num);
->>>>>>> origin/ram-2-khe
 }

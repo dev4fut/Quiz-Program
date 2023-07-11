@@ -3,14 +3,19 @@
 #include "gui.h"
 #include "../library/subject.h"
 #include "../library/class.h"
+#include "../controller/users.h"
 #include <iostream>
 
 using namespace std;
 
 Quiz quiz;
 
-Gui::Gui() {
-    Gui();
+Gui::Gui()
+{
+    users.read();
+    classes.read();
+    subjects.read();
+    questions.read();
 }
 
 void Gui::testDialog()
@@ -51,12 +56,12 @@ void Gui::loginDialog()
     getline(cin, checkpassword);
     if (users.checkLogin(checkusername, checkpassword))
     {
-        cout << "You're Right";
+        cout << "Login Successfully ^^";
         testDialog();
     }
     else
     {
-        cout << "You're Left";
+        cout << "Oopsie, i think there is somethings wrong with the information";
         main_menu();
     }
 }
@@ -97,8 +102,42 @@ void Gui::main_menu()
     }
 }
 
-void Gui::menu_users() {
-    
+void Gui::menu_users() 
+{
+    int choice;
+    system("cls");
+    cout << "\t\t\t____________________________________________________________________\n\n\n";
+    cout << "\t\t\t                         Welcome to Quiz                             \n\n\n";
+    cout << "\t\t\t________________________       USERS     ______________________________\n\n\n";
+    cout << "                                                                             \n\n";
+    cout << "\t| Press 1 to CREATE USERS |" << endl;
+    cout << "\t| Press 2 to REMOVE USERS |" << endl;
+    cout << "\t| Press 3 to UPDATE USERS |" << endl;
+    cout << "\t| Press 4 to SHOW USERS |" << endl;
+    cout << "\t| Press 5 to EXIT |" << endl;
+    cout << "Your Choice: ";
+    cin >> choice;
+
+    switch (choice)
+    {
+    case 1:
+        users.input();
+        break;
+    case 2:
+        // system("cls");
+        // cout << "Choose id you want to remove";
+        // cin >> ;
+        // users.read();
+        // users.remove();
+        break;
+    case 3:
+        // users.update(int id);
+        break;
+    case 4:
+        users.output();
+    default:
+        break;
+    }
 }
 
 void Gui::menu_CRUD()
@@ -121,17 +160,17 @@ void Gui::menu_CRUD()
     switch (c)
     {
     case 1:
-        menu_users();
+        // menu_users();
         break;
 
     case 2:
-        menu_classes();
+        // menu_classes();
         break;
     case 3:
-        menu_subjects();
+        // menu_subjects();
         break;
     case 4:
-        menu_questions();
+        // menu_questions();
         break;
     case 5:
         testDialog();
