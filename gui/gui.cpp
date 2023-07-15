@@ -9,9 +9,6 @@ Gui::Gui() {
     this->classes.read();
     this->subjects.read();
     this->questions.read();
-
-    this->users.output();
-    getchar();
 }
 
 const char* getString(char x) {
