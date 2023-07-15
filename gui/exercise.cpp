@@ -45,3 +45,10 @@ void Exercise::exercise() {
     exerciseStart();
     takeExercise(num);
 }
+
+void Exercise::quiz() {
+    cout << "Ban hay lam bai thi trac nghiem sau day: " << endl;
+    getchar();
+    exerciseStart();
+    takeExercise(50);
+}

@@ -9,6 +9,9 @@ Gui::Gui() {
     this->classes.read();
     this->subjects.read();
     this->questions.read();
+
+    this->users.output();
+    getchar();
 }
 
 const char* getString(char x) {
@@ -50,10 +53,15 @@ void Gui::loginDialog()
     string checkusername, checkpassword;
     const char* s1("g");
     const char* s2("v");
+    system("cls");
+    cout << "\t\t\t____________________________________________________________________\n\n\n";
+    cout << "\t\t\t                         Welcome to Quiz                             \n\n\n";
+    cout << "\t\t\t________________________       LOGIN     ______________________________\n\n\n";
+    cout << "                                                                             \n\n";
 
+    getchar();
     cout << "Username: ";
     getline(cin, checkusername);
-    getchar();
     cout << "Password: ";
     getline(cin, checkpassword);
 
@@ -386,17 +394,17 @@ void Gui::menu_CRUD()
     switch (c)
     {
     case 1:
-        // menu_users();
+        menu_users();
         break;
 
     case 2:
-        // menu_classes();
+        menu_classes();
         break;
     case 3:
-        // menu_subjects();
+        menu_subjects();
         break;
     case 4:
-        // menu_questions();
+        menu_questions();
         break;
     case 5:
         testDialog();
