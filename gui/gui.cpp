@@ -1,10 +1,6 @@
-#include "../controller/classes.h"
-#include "../controller/questions.h"
-#include "gui.h"
-#include "../library/subject.h"
-#include "../library/class.h"
 #include <iostream>
 #include <string.h>
+#include "gui.h"
 
 using namespace std;
 
@@ -41,7 +37,7 @@ void Gui::testDialog()
         exercise.exercise();
         break;
     case 2:
-        quiz.quiz();
+        exercise.quiz();
         break;
     default:
         system("exit");
@@ -73,7 +69,7 @@ void Gui::loginDialog()
     } 
     else
     {
-        cout << "You're Left";
+        cout << "Oopsie, i think there is somethings wrong with the information";
         main_menu();
     }
 }
@@ -390,17 +386,17 @@ void Gui::menu_CRUD()
     switch (c)
     {
     case 1:
-        menu_users();
+        // menu_users();
         break;
 
     case 2:
-        menu_classes();
+        // menu_classes();
         break;
     case 3:
-        menu_subjects();
+        // menu_subjects();
         break;
     case 4:
-        menu_questions();
+        // menu_questions();
         break;
     case 5:
         testDialog();

@@ -16,7 +16,6 @@ class Gui
     Subjects subjects;
     Questions questions;
     Exercise exercise;
-    Quiz quiz;
 
     Gui();
 
@@ -32,11 +31,11 @@ class Gui
 
     void menu_users();
 
-    void menu_classes();
+    // void menu_classes();
 
-    void menu_subjects();
+    // void menu_subjects();
 
-    void menu_questions();
+    // void menu_questions();
 };
 
 #endif

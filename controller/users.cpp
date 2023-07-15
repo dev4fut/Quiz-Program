@@ -28,13 +28,14 @@ void Users::input()
         data[n].input();
         cout << "Do you want to add more students? (y/n): ";
         getline(cin, check);
+        getchar();
         n++;
     } while (check == "y");
 }
 
 void Users::output()
 {
-    for (int i = 0; i < 100; i++)
+    for (int i = 0; i < this->n; i++)
     {
         data[i].ouptut();
     }

@@ -50,7 +50,7 @@ void Quiz::takeQuiz(int numEx) {
 
 void Quiz::quiz() {
     int num;
-    cout << "Ban muon lam bao nhiu?: ";
+    cout << "How many tests you want to do?: ";
     cin >> num;
     getchar();
     quizStart();
